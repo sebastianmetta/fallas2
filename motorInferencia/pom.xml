@@ -8,8 +8,11 @@
 	<packaging>jar</packaging>
 
 	<name>motorInferencia</name>
-	<url>http://maven.apache.org</url>
-
+	<url>https://github.com/sebastianmetta/fallas2/</url>
+	<description>Motor de inferencia para la evaluacion de reglas.</description>
+	<scm>
+		<url>https://github.com/sebastianmetta/fallas2/</url>
+	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -26,5 +29,32 @@
 			<artifactId>spring-context</artifactId>
 			<version>4.2.1.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.2.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.5.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
 	</dependencies>
+
 </project>

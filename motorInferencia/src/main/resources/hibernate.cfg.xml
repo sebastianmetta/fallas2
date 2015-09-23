@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+	<!DOCTYPE hibernate-configuration PUBLIC
+	        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<property name="hibernate.hbm2ddl.auto">create</property>
+
+		<!-- Mapping files -->
+		<!-- <mapping resource="ar/fiuba/fallasII/motorInferencia/model/Rule.hbm.xml" /> -->
+		<!-- Mapping class -->
+		<mapping class="ar.fiuba.fallasII.motorInferencia.model.Rule" />
+	</session-factory>
+
+</hibernate-configuration>
