@@ -47,6 +47,19 @@ public class BaseDeConocimiento {
 		return reglasAplicables;
 	}
 
+	public List<Regla> obtenerReglasAplicablesSegunHecho(Premisa hecho) {
+		List<Regla> reglasAplicables = new ArrayList<Regla>();
+		for (Regla each : this.reglas) {
+			if (!each.isEvaluada()) {
+				if (each.coincideHecho(hecho)) {
+					//log.info("La regla " + each.toString() + " implica la hipotesis solicitada.");
+					reglasAplicables.add(each);
+				}
+			}
+		}
+		return reglasAplicables;
+	}
+
 	public void imprimir() {
 		for (Regla each : this.getReglas()) {
 			log.info(each.toString());

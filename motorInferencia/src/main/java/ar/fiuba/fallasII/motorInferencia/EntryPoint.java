@@ -3,6 +3,7 @@ package ar.fiuba.fallasII.motorInferencia;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 //import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 //import ar.fiuba.fallasII.motorInferencia.dao.IGenericDao;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAdelante;
+import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAtras;
 import ar.fiuba.fallasII.motorInferencia.modelo.BaseDeConocimiento;
 import ar.fiuba.fallasII.motorInferencia.modelo.Premisa;
 import ar.fiuba.fallasII.motorInferencia.modelo.Regla;
@@ -34,19 +36,69 @@ public class EntryPoint {
 		// log.info("Rule saved: " + rule.toString());
 		// Regla ruleFound = dataAccess.get(Regla.class, rule.getId());
 		// log.info("Rule found: " + ruleFound.toString());
+		Scanner scanner = new Scanner(System.in);
+		// scanner.useDelimiter("\\n");
 
 		BaseDeConocimiento baseDeConocimiento = new BaseDeConocimiento();
 		baseDeConocimiento.addReglas(this.obtenerReglas());
 
-		EncadenamientoHaciaAdelante fc = new EncadenamientoHaciaAdelante(baseDeConocimiento);
-		List<Premisa> hechosIniciales = new ArrayList<Premisa>();
-		hechosIniciales.add(new Premisa("p"));
-		hechosIniciales.add(new Premisa("q"));
-		hechosIniciales.add(new Premisa("r"));
-		List<Premisa> conocimientoAdquirido = fc.evaluar(hechosIniciales);
-		log.info("FINALIZADO.");
-		log.info("Conocimiento adquirido: " + Arrays.toString(conocimientoAdquirido.toArray()));
+		log.info("Base de conocimiento:");
+		baseDeConocimiento.imprimir();
 
+		log.info("Por favor, seleccione la modalidad para la ejecución: ");
+		log.info("1. Encadenamiento hacia adelante.");
+		log.info("2. Encadenamiento hacia atras.");
+		int opcion = scanner.nextInt();
+		if (opcion == 1) {
+			this.ejecutarEncadenamientoHaciaAdelante(baseDeConocimiento, scanner);
+		}
+		if (opcion == 2) {
+			this.ejecutarEncadenamientoHaciaAtras(baseDeConocimiento, scanner);
+		}
+
+		scanner.close();
+	}
+
+	private List<Premisa> obtenerPremisasDelUsuario(Scanner scanner) {
+		List<Premisa> premisas = new ArrayList<Premisa>();
+		log.info("Ingrese una premisa como conocimiento inicial o 0 para terminar: ");
+		String opcion = scanner.next();
+		while (!opcion.equals("0")) {
+			if (!opcion.equals("0")) {
+				premisas.add(new Premisa(opcion));
+			}
+			log.info("Ingrese una premisa como conocimiento inicial o 0 para terminar: ");
+			opcion = scanner.next();
+		}
+
+		return premisas;
+	}
+
+	private Premisa obtenerHipotesisDelUsuario(Scanner scanner) {
+		log.info("Ingrese una hipotesis a verificar: ");
+		String opcion = scanner.next();
+		return (new Premisa(opcion));
+	}
+
+	private void ejecutarEncadenamientoHaciaAdelante(BaseDeConocimiento baseDeConocimiento, Scanner scanner) {
+		EncadenamientoHaciaAdelante fc = new EncadenamientoHaciaAdelante(baseDeConocimiento);
+		List<Premisa> hechosIniciales = this.obtenerPremisasDelUsuario(scanner);
+		List<Premisa> conocimientoAdquirido = fc.evaluar(hechosIniciales);
+		log.info("Conocimiento adquirido: " + Arrays.toString(conocimientoAdquirido.toArray()));
+	}
+
+	private void ejecutarEncadenamientoHaciaAtras(BaseDeConocimiento baseDeConocimiento, Scanner scanner) {
+		EncadenamientoHaciaAtras bc = new EncadenamientoHaciaAtras(baseDeConocimiento);
+		List<Premisa> hechosIniciales = this.obtenerPremisasDelUsuario(scanner);
+		Premisa hipotesisInicial = this.obtenerHipotesisDelUsuario(scanner);
+		List<Premisa> conocimientoAdquirido = bc.evaluar(hechosIniciales, hipotesisInicial);
+		
+		log.info("Conocimiento adquirido: " + Arrays.toString(conocimientoAdquirido.toArray()));
+		if (conocimientoAdquirido.contains(hipotesisInicial)) {
+			log.info("La hipótesis " + hipotesisInicial + " fue deducida.");
+		} else {
+			log.info("La hipótesis " + hipotesisInicial + " no fue deducida.");
+		}
 	}
 
 	private List<Regla> obtenerReglas() {

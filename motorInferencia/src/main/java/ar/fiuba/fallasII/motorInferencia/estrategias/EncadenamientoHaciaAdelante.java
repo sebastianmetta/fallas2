@@ -44,12 +44,12 @@ public class EncadenamientoHaciaAdelante {
 	/**
 	 * Estrategia de eleccion de reglas.
 	 */
-	public Regla elegirRegla(List<Regla> reglasElegibles) {
+	private Regla elegirRegla(List<Regla> reglasElegibles) {
 		// Estrategia actual: Devuelve siempre la primera.
 		return reglasElegibles.get(0);
 	}
 
-	public boolean continuar(List<Regla> reglasAplicables) {
+	private boolean continuar(List<Regla> reglasAplicables) {
 		if (!reglasAplicables.isEmpty()) {
 			return true;
 		} else {

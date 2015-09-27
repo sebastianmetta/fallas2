@@ -78,6 +78,20 @@ public class Regla {
 		return coincidencia;
 	}
 
+	public boolean coincideHecho(Premisa hecho) {
+		return this.getHecho().equals(hecho);
+	}
+
+	public List<Premisa> obtenerPremisasNoCoincidentes(List<Premisa> conjunto) {
+		List<Premisa> noCoincidentes = new ArrayList<Premisa>();
+		for (Premisa each : this.getPremisas()) {
+			if (!conjunto.contains(each)) {
+				noCoincidentes.add(each);
+			}
+		}
+		return noCoincidentes;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
