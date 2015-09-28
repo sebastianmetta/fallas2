@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 //import ar.fiuba.fallasII.motorInferencia.dao.IGenericDao;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAdelante;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAtras;
+import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAtras2;
 import ar.fiuba.fallasII.motorInferencia.modelo.BaseDeConocimiento;
 import ar.fiuba.fallasII.motorInferencia.modelo.Premisa;
 import ar.fiuba.fallasII.motorInferencia.modelo.Regla;
@@ -88,10 +89,13 @@ public class EntryPoint {
 	}
 
 	private void ejecutarEncadenamientoHaciaAtras(BaseDeConocimiento baseDeConocimiento, Scanner scanner) {
-		EncadenamientoHaciaAtras bc = new EncadenamientoHaciaAtras(baseDeConocimiento);
 		List<Premisa> hechosIniciales = this.obtenerPremisasDelUsuario(scanner);
 		Premisa hipotesisInicial = this.obtenerHipotesisDelUsuario(scanner);
-		List<Premisa> conocimientoAdquirido = bc.evaluar(hechosIniciales, hipotesisInicial);
+
+		//EncadenamientoHaciaAtras bc = new EncadenamientoHaciaAtras(baseDeConocimiento);
+		//List<Premisa> conocimientoAdquirido = bc2.evaluar(hechosIniciales, hipotesisInicial);
+		EncadenamientoHaciaAtras2 bc2 = new EncadenamientoHaciaAtras2(baseDeConocimiento, hechosIniciales);
+		List<Premisa> conocimientoAdquirido = bc2.evaluar(hipotesisInicial);
 		
 		log.info("Conocimiento adquirido: " + Arrays.toString(conocimientoAdquirido.toArray()));
 		if (conocimientoAdquirido.contains(hipotesisInicial)) {
@@ -133,11 +137,29 @@ public class EntryPoint {
 		Regla r4 = new Regla();
 		List<Premisa> premisasR4 = new ArrayList<Premisa>();
 		premisasR4.add(new Premisa("s"));
+		premisasR4.add(new Premisa("x"));
 		premisasR4.add(new Premisa("r"));
 		r4.setNombre("R4");
 		r4.setHecho(new Premisa("v"));
 		r4.setPremisas(premisasR4);
 		reglas.add(r4);
+		
+		Regla r5 = new Regla();
+		List<Premisa> premisasR5 = new ArrayList<Premisa>();
+		premisasR5.add(new Premisa("s"));
+		premisasR5.add(new Premisa("y"));
+		r5.setNombre("R5");
+		r5.setHecho(new Premisa("x"));
+		r5.setPremisas(premisasR5);
+		reglas.add(r5);
+		
+		Regla r6 = new Regla();
+		List<Premisa> premisasR6 = new ArrayList<Premisa>();
+		premisasR6.add(new Premisa("a"));
+		r6.setNombre("R6");
+		r6.setHecho(new Premisa("x"));
+		r6.setPremisas(premisasR6);
+		reglas.add(r6);
 
 		return reglas;
 	}
