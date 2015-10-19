@@ -1,1170 +1,649 @@
-2015-09-28 10:15:30,121  INFO (EntryPoint.java:45) - Base de conocimiento:
-2015-09-28 10:15:30,131  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 10:15:30,132  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 10:15:30,132  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 10:15:30,133  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:15:30,138  INFO (EntryPoint.java:48) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 10:15:30,139  INFO (EntryPoint.java:49) - 1. Encadenamiento hacia adelante.
-2015-09-28 10:15:30,139  INFO (EntryPoint.java:50) - 2. Encadenamiento hacia atras.
-2015-09-28 10:16:58,297  INFO (EntryPoint.java:64) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:17:18,369  INFO (EntryPoint.java:70) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:17:34,551  INFO (EntryPoint.java:70) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:17:42,633  INFO (EntryPoint.java:70) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:17:58,566  INFO (EntryPoint.java:78) - Ingrese una hipotesis a verificar: 
-2015-09-28 10:29:13,067  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 0. Base de conocimiento:
-2015-09-28 10:29:21,015  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 10:29:21,016  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 10:29:21,035  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 10:29:21,036  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:29:24,910  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 10:29:27,644  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: v
-2015-09-28 10:31:40,553  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:32:52,025  INFO (EncadenamientoHaciaAtras.java:57) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:34:15,794  INFO (EncadenamientoHaciaAtras.java:62) - Se agrega hipotesis para intentar verificar: s
-2015-09-28 10:34:41,888  INFO (EncadenamientoHaciaAtras.java:68) - Cola de hipotesis a verificar: [v, s]
-2015-09-28 10:36:09,006  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 1. Base de conocimiento:
-2015-09-28 10:36:11,971  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 10:36:11,972  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 10:36:11,972  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 10:36:11,972  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:36:14,387  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 10:36:15,817  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: s
-2015-09-28 10:36:47,589  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 10:37:00,508  INFO (EncadenamientoHaciaAtras.java:49) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 10:37:03,909  INFO (EncadenamientoHaciaAtras.java:51) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 10:38:06,968  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 2. Base de conocimiento:
-2015-09-28 10:38:08,347  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 10:38:08,349  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 10:38:08,350  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 10:38:08,350  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:38:09,607  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 10:38:12,718  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: v
-2015-09-28 10:38:35,633  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:38:41,001  INFO (EncadenamientoHaciaAtras.java:49) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:38:41,350  INFO (EncadenamientoHaciaAtras.java:51) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 10:39:06,721  INFO (EntryPoint.java:96) - Conocimiento adquirido: [p, q, r, s, v]
-2015-09-28 10:39:08,670  INFO (EntryPoint.java:98) - La hipótesis v fue deducida.
-2015-09-28 10:59:11,179  INFO (EntryPoint.java:45) - Base de conocimiento:
-2015-09-28 10:59:11,183  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 10:59:11,183  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 10:59:11,183  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 10:59:11,183  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 10:59:11,186  INFO (EntryPoint.java:48) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 10:59:11,186  INFO (EntryPoint.java:49) - 1. Encadenamiento hacia adelante.
-2015-09-28 10:59:11,186  INFO (EntryPoint.java:50) - 2. Encadenamiento hacia atras.
-2015-09-28 10:59:39,715  INFO (EntryPoint.java:64) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:59:44,382  INFO (EntryPoint.java:70) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:59:47,653  INFO (EntryPoint.java:70) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 10:59:49,201  INFO (EntryPoint.java:70) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 11:00:01,381  INFO (EntryPoint.java:78) - Ingrese una hipotesis a verificar: 
-2015-09-28 11:00:23,638  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 0. Base de conocimiento:
-2015-09-28 11:00:24,995  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 11:00:24,997  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 11:00:25,012  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 11:00:25,013  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 11:00:25,749  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 11:00:26,295  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: z
-2015-09-28 11:00:29,641  INFO (EncadenamientoHaciaAtras.java:71) - No existe ninguna regla que permita deducir la hipotesis z
-2015-09-28 11:00:41,440  INFO (EntryPoint.java:96) - Conocimiento adquirido: [p, q, r]
-2015-09-28 11:01:00,532  INFO (EntryPoint.java:100) - La hipótesis z no fue deducida.
-2015-09-28 12:33:55,753  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:33:55,763  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:33:55,764  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:33:55,764  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:33:55,764  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:33:55,770  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:33:55,771  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:33:55,771  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:34:06,072  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:34:10,232  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:34:13,102  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:34:19,033  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:34:21,046  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:35:25,001  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:35:25,008  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:35:25,008  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:35:25,008  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:35:25,008  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:35:25,013  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:35:25,014  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:35:25,017  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:35:35,474  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:35:39,823  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:35:41,448  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:35:43,201  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:35:45,180  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:36:26,888  INFO (EncadenamientoHaciaAtras2.java:63) - Iteracion 0. Base de conocimiento:
-2015-09-28 12:36:32,089  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:36:32,090  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:36:32,108  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:36:32,109  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:36:33,973  INFO (EncadenamientoHaciaAtras2.java:65) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:36:35,861  INFO (EncadenamientoHaciaAtras2.java:66) - Hipotesis actual a verificar: v
-2015-09-28 12:36:47,526  INFO (EncadenamientoHaciaAtras2.java:75) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:37:04,078  INFO (EncadenamientoHaciaAtras2.java:99) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:37:07,150  INFO (EncadenamientoHaciaAtras2.java:100) - Nueva cola de hipotesis a verificar: [v, s]
-2015-09-28 12:45:19,451  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:45:19,455  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:45:19,456  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:45:19,456  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:45:19,456  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:45:19,460  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:45:19,460  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:45:19,460  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:45:24,190  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:45:26,477  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:45:27,289  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:45:28,514  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:45:29,888  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:45:50,256  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 12:45:50,597  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:45:50,598  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:45:50,616  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:45:50,617  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:45:50,936  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:45:53,564  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: v
-2015-09-28 12:46:00,166  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:46:06,950  INFO (EncadenamientoHaciaAtras2.java:101) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:46:13,393  INFO (EncadenamientoHaciaAtras2.java:102) - Nueva cola de hipotesis a verificar: [v, s]
-2015-09-28 12:46:38,047  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 1. Base de conocimiento:
-2015-09-28 12:46:42,574  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:46:42,575  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:46:42,576  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:46:42,577  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:46:44,894  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:46:47,161  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: s
-2015-09-28 12:46:57,353  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:47:21,151  INFO (EncadenamientoHaciaAtras2.java:91) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 12:47:32,348  INFO (EncadenamientoHaciaAtras2.java:93) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 12:47:45,972  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 2. Base de conocimiento:
-2015-09-28 12:47:47,761  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 12:47:47,762  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:47:47,763  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:47:47,764  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:47:49,248  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 12:47:52,250  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: v
-2015-09-28 12:48:31,835  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, r], hecho=v]
-2015-09-28 12:48:38,301  INFO (EncadenamientoHaciaAtras2.java:91) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, r], hecho=v]
-2015-09-28 12:48:39,438  INFO (EncadenamientoHaciaAtras2.java:93) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 12:48:54,048  INFO (EntryPoint.java:99) - Conocimiento adquirido: [p, q, r, s, v]
-2015-09-28 12:49:01,303  INFO (EntryPoint.java:101) - La hipótesis v fue deducida.
-2015-09-28 12:51:18,554  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:51:18,558  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:51:18,558  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:51:18,558  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:51:18,558  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:51:18,561  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:51:18,562  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:51:18,562  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:51:27,537  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:51:29,155  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:51:30,098  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:51:31,035  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:51:32,334  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:51:42,737  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 12:51:43,000  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:51:43,001  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:51:43,019  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:51:43,020  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:51:44,276  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:51:45,991  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: v
-2015-09-28 12:51:49,855  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:52:04,194  INFO (EncadenamientoHaciaAtras2.java:101) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:52:06,786  INFO (EncadenamientoHaciaAtras2.java:102) - Nueva cola de hipotesis a verificar: [v, s, x]
-2015-09-28 12:52:14,951  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 1. Base de conocimiento:
-2015-09-28 12:52:15,156  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:52:15,157  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:52:15,157  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:52:15,158  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:52:15,354  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:52:15,995  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: x
-2015-09-28 12:52:49,742  INFO (EncadenamientoHaciaAtras2.java:108) - No existe ninguna regla que permita deducir la hipotesis x
-2015-09-28 12:54:25,690  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:54:25,694  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:54:25,695  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:54:25,695  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:54:25,695  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:54:25,699  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:54:25,699  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:54:25,699  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:54:28,579  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:54:30,437  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:54:32,245  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:54:33,214  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:54:34,266  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:54:40,529  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 0. Base de conocimiento:
-2015-09-28 12:54:40,716  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:54:40,717  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:54:40,730  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:54:40,730  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:54:40,857  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:54:41,043  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: v
-2015-09-28 12:54:42,706  INFO (EncadenamientoHaciaAtras2.java:79) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:54:44,172  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:54:44,384  INFO (EncadenamientoHaciaAtras2.java:103) - Nueva cola de hipotesis a verificar: [v, s, x]
-2015-09-28 12:54:48,048  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 1. Base de conocimiento:
-2015-09-28 12:54:48,251  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:54:48,252  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:54:48,252  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:54:48,252  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 12:54:48,460  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:54:48,703  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: x
-2015-09-28 12:54:55,320  INFO (EncadenamientoHaciaAtras2.java:110) - No existe ninguna regla que permita deducir la hipotesis x
-2015-09-28 12:55:01,827  INFO (EntryPoint.java:99) - Conocimiento adquirido: [p, q, r]
-2015-09-28 12:55:04,654  INFO (EntryPoint.java:103) - La hipótesis v no fue deducida.
-2015-09-28 12:56:51,296  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:56:51,303  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:56:51,303  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:56:51,304  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:56:51,304  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[], hecho=x]
-2015-09-28 12:56:51,310  INFO (BaseDeConocimiento.java:65) - Regla [nombre=null, eval=false, premisas=[], hecho=null]
-2015-09-28 12:56:51,310  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:56:51,310  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:56:51,310  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:56:59,344  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:57:03,602  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:57:04,397  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:57:21,324  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:57:23,328  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:57:40,147  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 0. Base de conocimiento:
-2015-09-28 12:57:40,362  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:57:40,371  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:57:40,371  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:57:40,372  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[], hecho=x]
-2015-09-28 12:57:40,372  INFO (BaseDeConocimiento.java:65) - Regla [nombre=null, eval=false, premisas=[], hecho=null]
-2015-09-28 12:57:40,551  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:57:40,719  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: v
-2015-09-28 12:58:06,088  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 12:58:06,096  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:58:06,096  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:58:06,096  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:58:06,096  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[], hecho=x]
-2015-09-28 12:58:06,101  INFO (BaseDeConocimiento.java:65) - Regla [nombre=null, eval=false, premisas=[], hecho=null]
-2015-09-28 12:58:06,101  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 12:58:06,101  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 12:58:06,101  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 12:58:11,325  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:58:16,839  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:58:17,636  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:58:18,489  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 12:58:19,527  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 12:58:28,143  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 0. Base de conocimiento:
-2015-09-28 12:58:28,926  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 12:58:28,942  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 12:58:28,943  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 12:58:28,944  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[], hecho=x]
-2015-09-28 12:58:28,945  INFO (BaseDeConocimiento.java:65) - Regla [nombre=null, eval=false, premisas=[], hecho=null]
-2015-09-28 12:58:29,871  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 12:58:32,877  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: v
-2015-09-28 13:00:30,628  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 13:00:30,633  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:00:30,634  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:00:30,634  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:00:30,635  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:00:30,642  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:00:30,642  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 13:00:30,642  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 13:00:30,642  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 13:00:33,004  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:00:34,787  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:00:35,463  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:00:37,595  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:00:38,558  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 13:00:52,394  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:00:52,782  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:00:52,800  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:00:52,801  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:00:52,802  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:00:52,803  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:00:53,017  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:00:53,224  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: v
-2015-09-28 13:01:01,263  INFO (EncadenamientoHaciaAtras2.java:79) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:01:19,571  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:01:22,677  INFO (EncadenamientoHaciaAtras2.java:103) - Nueva cola de hipotesis a verificar: [v, s, x]
-2015-09-28 13:08:12,846  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 1. Base de conocimiento:
-2015-09-28 13:08:16,388  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:08:16,389  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:08:16,390  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:08:16,391  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:08:16,392  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:08:17,596  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:08:20,640  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: x
-2015-09-28 13:08:34,244  INFO (EncadenamientoHaciaAtras2.java:79) - Regla seleccionada: Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:08:58,633  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:09:00,690  INFO (EncadenamientoHaciaAtras2.java:103) - Nueva cola de hipotesis a verificar: [v, s, x, s, y]
-2015-09-28 13:10:05,283  INFO (EncadenamientoHaciaAtras2.java:67) - Iteracion 2. Base de conocimiento:
-2015-09-28 13:10:06,032  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:10:06,033  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:10:06,034  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:10:06,035  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:10:06,035  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:10:06,899  INFO (EncadenamientoHaciaAtras2.java:69) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:10:07,994  INFO (EncadenamientoHaciaAtras2.java:70) - Hipotesis actual a verificar: y
-2015-09-28 13:11:09,798  INFO (EncadenamientoHaciaAtras2.java:110) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 13:28:47,074  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 13:28:47,081  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:28:47,082  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:28:47,082  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:28:47,083  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:28:47,086  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:28:47,086  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 13:28:47,087  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 13:28:47,087  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 13:28:50,590  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:28:53,550  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:28:54,377  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:28:57,549  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:28:58,863  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 13:29:08,785  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:29:09,078  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:29:09,095  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:29:09,096  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:29:09,097  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:29:09,097  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:29:09,367  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:29:12,629  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: v
-2015-09-28 13:29:25,927  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:29:34,053  INFO (EncadenamientoHaciaAtras2.java:90) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:29:36,645  INFO (EncadenamientoHaciaAtras2.java:91) - Nueva cola de hipotesis a verificar: [v, s, x]
-2015-09-28 13:33:39,822  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 13:33:39,828  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:33:39,828  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:33:39,828  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:33:39,828  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:33:39,832  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:33:39,832  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 13:33:39,832  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 13:33:39,832  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 13:33:41,922  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:33:42,563  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:33:43,106  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:33:44,070  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:33:44,756  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 13:33:52,726  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:33:52,933  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:33:52,943  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:33:52,943  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:33:52,944  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:33:52,944  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:33:53,128  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:33:53,356  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: v
-2015-09-28 13:33:54,455  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:33:58,661  INFO (EncadenamientoHaciaAtras2.java:90) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:34:01,438  INFO (EncadenamientoHaciaAtras2.java:91) - Nueva cola de hipotesis a verificar: [v, s, x]
-2015-09-28 13:34:21,998  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:34:38,649  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:34:38,650  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:34:38,651  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:34:38,652  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:34:38,653  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:34:39,524  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:34:43,041  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: x
-2015-09-28 13:34:54,125  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:35:05,057  INFO (EncadenamientoHaciaAtras2.java:90) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:35:09,308  INFO (EncadenamientoHaciaAtras2.java:91) - Nueva cola de hipotesis a verificar: [v, s, x, s, y]
-2015-09-28 13:35:29,082  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:35:35,980  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:35:35,982  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:35:35,983  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:35:35,984  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:35:35,984  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:35:36,411  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:35:38,079  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: y
-2015-09-28 13:35:52,197  INFO (EncadenamientoHaciaAtras2.java:126) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 13:36:27,883  INFO (EncadenamientoHaciaAtras2.java:66) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:36:28,146  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:36:28,146  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:36:28,147  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:36:28,147  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:36:28,148  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:36:28,394  INFO (EncadenamientoHaciaAtras2.java:68) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:36:29,687  INFO (EncadenamientoHaciaAtras2.java:69) - Hipotesis actual a verificar: s
-2015-09-28 13:36:47,218  INFO (EncadenamientoHaciaAtras2.java:78) - Regla seleccionada: Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:36:55,675  INFO (EncadenamientoHaciaAtras2.java:109) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 13:36:57,755  INFO (EncadenamientoHaciaAtras2.java:111) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 13:52:53,195  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 13:52:53,200  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:52:53,200  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:52:53,200  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:52:53,200  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:52:53,203  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:52:53,203  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 13:52:53,203  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 13:52:53,204  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 13:52:53,204  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 13:52:55,996  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:52:57,068  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:52:57,748  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:52:58,553  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 13:52:59,400  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 13:53:03,181  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 0. Base de conocimiento:
-2015-09-28 13:53:03,197  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:53:03,198  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:53:03,199  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:53:03,199  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,200  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:53:03,201  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 13:53:03,202  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:53:03,202  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: v
-2015-09-28 13:53:03,203  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,204  INFO (EncadenamientoHaciaAtras2.java:178) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,205  INFO (EncadenamientoHaciaAtras2.java:179) - Nueva cola de hipotesis a verificar: [v, s, x]
-2015-09-28 13:53:03,206  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 1. Base de conocimiento:
-2015-09-28 13:53:03,207  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:53:03,207  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:53:03,208  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:53:03,209  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,210  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 13:53:03,210  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 13:53:03,211  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:53:03,212  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: x
-2015-09-28 13:53:03,213  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 13:53:03,214  INFO (EncadenamientoHaciaAtras2.java:178) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 13:53:03,214  INFO (EncadenamientoHaciaAtras2.java:179) - Nueva cola de hipotesis a verificar: [v, s, x, s, y]
-2015-09-28 13:53:03,215  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 2. Base de conocimiento:
-2015-09-28 13:53:03,216  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:53:03,217  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:53:03,218  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:53:03,219  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,219  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 13:53:03,220  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 13:53:03,221  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:53:03,222  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: y
-2015-09-28 13:53:03,222  INFO (EncadenamientoHaciaAtras2.java:208) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 13:53:03,222  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 3. Base de conocimiento:
-2015-09-28 13:53:03,223  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 13:53:03,223  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 13:53:03,224  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 13:53:03,224  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,224  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 13:53:03,225  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 13:53:03,225  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 13:53:03,225  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: s
-2015-09-28 13:53:03,226  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 13:53:03,226  INFO (EncadenamientoHaciaAtras2.java:199) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 13:53:03,227  INFO (EncadenamientoHaciaAtras2.java:200) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 13:53:03,227  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 13:53:03,228  INFO (EncadenamientoHaciaAtras2.java:199) - La hipotesis x es deducible mediante la regla Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 13:53:03,228  INFO (EncadenamientoHaciaAtras2.java:200) - Se incluye x en el conocimiento adquirido hasta el momento.
-2015-09-28 13:53:03,229  INFO (EncadenamientoHaciaAtras2.java:199) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 13:53:03,229  INFO (EncadenamientoHaciaAtras2.java:200) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 14:02:56,847  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:02:56,853  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:02:56,854  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:02:56,854  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:02:56,854  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:02:56,859  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:02:56,859  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:02:56,860  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:02:56,860  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:02:56,860  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:02:59,424  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:03:01,388  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:03:02,894  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:03:03,676  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:03:05,601  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:03:19,632  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:03:20,622  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:03:20,624  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:03:20,625  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:03:20,625  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:03:20,626  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:03:20,627  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:03:24,963  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:03:26,717  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: v
-2015-09-28 14:03:36,389  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:03:59,037  INFO (EncadenamientoHaciaAtras2.java:178) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:04:01,380  INFO (EncadenamientoHaciaAtras2.java:179) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 14:04:28,010  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 1. Base de conocimiento:
-2015-09-28 14:04:32,354  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:04:32,356  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:04:32,356  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:04:32,357  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:04:32,358  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:04:32,359  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:04:38,443  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:04:41,029  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: s
-2015-09-28 14:04:50,467  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:05:23,222  INFO (EncadenamientoHaciaAtras2.java:203) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:05:24,713  INFO (EncadenamientoHaciaAtras2.java:204) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 14:06:55,507  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:06:55,514  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:06:55,515  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:06:55,515  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:06:55,515  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:06:55,519  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:06:55,519  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:06:55,519  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:06:55,519  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:06:55,519  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:06:58,476  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:07:00,315  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:07:01,251  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:07:02,050  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:07:02,878  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:07:08,808  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:07:09,278  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:07:09,280  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:07:09,281  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:07:09,282  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:07:09,283  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:07:09,284  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:07:09,694  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:07:10,617  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: v
-2015-09-28 14:07:17,498  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:07:28,406  INFO (EncadenamientoHaciaAtras2.java:178) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:07:29,015  INFO (EncadenamientoHaciaAtras2.java:179) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 14:07:48,748  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 1. Base de conocimiento:
-2015-09-28 14:07:49,264  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:07:49,265  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:07:49,266  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:07:49,267  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:07:49,267  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:07:49,268  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:07:50,190  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:07:55,157  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: s
-2015-09-28 14:08:03,950  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:08:14,429  INFO (EncadenamientoHaciaAtras2.java:203) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:08:16,577  INFO (EncadenamientoHaciaAtras2.java:204) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 14:08:32,041  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 2. Base de conocimiento:
-2015-09-28 14:08:32,367  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:08:32,368  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:08:32,369  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:08:32,370  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:08:32,371  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:08:32,371  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:08:41,162  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:08:43,752  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: x
-2015-09-28 14:09:01,575  INFO (EncadenamientoHaciaAtras2.java:165) - Regla seleccionada: Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:09:11,437  INFO (EncadenamientoHaciaAtras2.java:178) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:09:15,713  INFO (EncadenamientoHaciaAtras2.java:179) - Nueva cola de hipotesis a verificar: [y]
-2015-09-28 14:09:36,173  INFO (EncadenamientoHaciaAtras2.java:148) - Iteracion 3. Base de conocimiento:
-2015-09-28 14:09:37,278  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:09:37,280  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:09:37,280  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:09:37,281  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:09:37,282  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:09:37,283  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:09:51,891  INFO (EncadenamientoHaciaAtras2.java:150) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:10:00,558  INFO (EncadenamientoHaciaAtras2.java:151) - Hipotesis actual a verificar: y
-2015-09-28 14:10:30,893  INFO (EncadenamientoHaciaAtras2.java:212) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 14:14:49,388  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:14:49,394  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:14:49,395  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:14:49,395  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:14:49,395  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:14:49,398  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:14:49,398  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:14:49,398  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:14:49,398  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:14:49,399  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:14:51,921  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:14:55,274  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:14:56,137  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:14:57,846  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:14:59,095  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:15:05,857  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:15:06,307  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:15:08,781  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:15:08,782  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:15:08,783  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:15:08,784  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:15:08,785  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:15:08,786  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:15:10,222  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:15:14,340  INFO (EncadenamientoHaciaAtras2.java:153) - Hipotesis actual a verificar: v
-2015-09-28 14:16:31,395  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:16:31,406  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:31,406  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:31,406  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:31,406  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:31,413  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:31,414  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:31,414  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:16:31,414  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:16:31,414  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:16:34,148  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:16:36,464  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:16:36,959  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:16:38,713  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:16:40,546  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:16:43,894  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:16:43,898  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,898  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:43,898  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:43,900  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,901  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,901  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:43,901  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:16:43,902  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: v
-2015-09-28 14:16:43,902  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,902  INFO (EncadenamientoHaciaAtras.java:57) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,903  INFO (EncadenamientoHaciaAtras.java:62) - Se agrega hipotesis para intentar verificar: s
-2015-09-28 14:16:43,903  INFO (EncadenamientoHaciaAtras.java:62) - Se agrega hipotesis para intentar verificar: x
-2015-09-28 14:16:43,903  INFO (EncadenamientoHaciaAtras.java:68) - Cola de hipotesis a verificar: [v, s, x]
-2015-09-28 14:16:43,904  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 1. Base de conocimiento:
-2015-09-28 14:16:43,906  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,906  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:43,906  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:43,906  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,907  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,907  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:43,907  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:16:43,907  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: x
-2015-09-28 14:16:43,908  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,908  INFO (EncadenamientoHaciaAtras.java:57) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,908  INFO (EncadenamientoHaciaAtras.java:62) - Se agrega hipotesis para intentar verificar: s
-2015-09-28 14:16:43,908  INFO (EncadenamientoHaciaAtras.java:62) - Se agrega hipotesis para intentar verificar: y
-2015-09-28 14:16:43,909  INFO (EncadenamientoHaciaAtras.java:68) - Cola de hipotesis a verificar: [v, s, x, s, y]
-2015-09-28 14:16:43,909  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 2. Base de conocimiento:
-2015-09-28 14:16:43,909  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,909  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:43,910  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:43,910  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,910  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,910  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:43,911  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:16:43,911  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: y
-2015-09-28 14:16:43,911  INFO (EncadenamientoHaciaAtras.java:71) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 14:16:43,912  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 3. Base de conocimiento:
-2015-09-28 14:16:43,912  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,912  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:43,912  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:43,913  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,913  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,913  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:43,914  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:16:43,914  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: s
-2015-09-28 14:16:43,914  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,914  INFO (EncadenamientoHaciaAtras.java:49) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,915  INFO (EncadenamientoHaciaAtras.java:51) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 14:16:43,915  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 4. Base de conocimiento:
-2015-09-28 14:16:43,915  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,915  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:43,916  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:43,916  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,916  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,916  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:43,917  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:16:43,917  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: s
-2015-09-28 14:16:43,917  INFO (EncadenamientoHaciaAtras.java:71) - No existe ninguna regla que permita deducir la hipotesis s
-2015-09-28 14:16:43,918  INFO (EncadenamientoHaciaAtras.java:36) - Iteracion 5. Base de conocimiento:
-2015-09-28 14:16:43,918  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:16:43,918  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:16:43,918  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:16:43,919  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:16:43,919  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,919  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:16:43,919  INFO (EncadenamientoHaciaAtras.java:39) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:16:43,920  INFO (EncadenamientoHaciaAtras.java:40) - Hipotesis actual a verificar: x
-2015-09-28 14:16:43,920  INFO (EncadenamientoHaciaAtras.java:46) - Regla seleccionada: Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,920  INFO (EncadenamientoHaciaAtras.java:57) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:16:43,921  INFO (EncadenamientoHaciaAtras.java:68) - Cola de hipotesis a verificar: [v, x, y]
-2015-09-28 14:16:43,921  INFO (EntryPoint.java:99) - Conocimiento adquirido: [p, q, r, s]
-2015-09-28 14:16:43,921  INFO (EntryPoint.java:103) - La hipótesis v no fue deducida.
-2015-09-28 14:19:07,158  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:19:07,165  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:19:07,165  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:19:07,165  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:19:07,166  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:19:07,171  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:19:07,172  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:19:07,172  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:19:07,172  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:19:07,172  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:19:09,864  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:19:11,079  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:19:11,593  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:19:12,480  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:19:13,250  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:19:19,497  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:19:19,878  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:19:20,868  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:19:20,869  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:19:20,870  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:19:20,871  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:19:20,872  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:19:20,874  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:19:21,160  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:19:23,546  INFO (EncadenamientoHaciaAtras2.java:153) - Hipotesis actual a verificar: v
-2015-09-28 14:19:26,204  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: v
-2015-09-28 14:19:35,614  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:19:41,340  INFO (EncadenamientoHaciaAtras2.java:181) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:19:50,715  INFO (EncadenamientoHaciaAtras2.java:182) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 14:20:09,064  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:20:09,573  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 1. Base de conocimiento:
-2015-09-28 14:20:10,300  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:20:10,301  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:20:10,302  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:20:10,303  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:20:10,304  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:20:10,304  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:20:12,139  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:20:13,393  INFO (EncadenamientoHaciaAtras2.java:153) - Hipotesis actual a verificar: s
-2015-09-28 14:20:14,493  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: s
-2015-09-28 14:20:30,169  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:20:35,305  INFO (EncadenamientoHaciaAtras2.java:197) - 
-2015-09-28 14:20:39,368  INFO (EncadenamientoHaciaAtras2.java:198) - Continua Iteracion 1. Base de conocimiento:
-2015-09-28 14:21:39,367  INFO (EncadenamientoHaciaAtras2.java:208) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:21:40,845  INFO (EncadenamientoHaciaAtras2.java:209) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 14:21:54,816  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:21:55,031  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 2. Base de conocimiento:
-2015-09-28 14:21:55,263  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:21:55,264  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:21:55,265  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:21:55,266  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:21:55,267  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:21:55,268  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:21:55,610  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:21:56,157  INFO (EncadenamientoHaciaAtras2.java:153) - Hipotesis actual a verificar: x
-2015-09-28 14:21:56,440  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: x
-2015-09-28 14:21:59,195  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:22:10,827  INFO (EncadenamientoHaciaAtras2.java:181) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:22:19,772  INFO (EncadenamientoHaciaAtras2.java:182) - Nueva cola de hipotesis a verificar: [y]
-2015-09-28 14:22:54,671  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:22:54,672  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 3. Base de conocimiento:
-2015-09-28 14:22:54,673  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:22:54,673  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:22:54,674  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:22:54,674  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:22:54,675  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:22:54,675  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:22:54,675  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:22:54,675  INFO (EncadenamientoHaciaAtras2.java:153) - Hipotesis actual a verificar: y
-2015-09-28 14:22:54,676  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: y
-2015-09-28 14:22:54,676  INFO (EncadenamientoHaciaAtras2.java:219) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 14:22:54,676  INFO (EncadenamientoHaciaAtras2.java:197) - 
-2015-09-28 14:22:54,677  INFO (EncadenamientoHaciaAtras2.java:198) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 14:22:54,677  INFO (EncadenamientoHaciaAtras2.java:211) - La hipotesis x NO es deducible mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:22:54,677  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 14:22:54,677  INFO (EncadenamientoHaciaAtras2.java:197) - 
-2015-09-28 14:22:54,678  INFO (EncadenamientoHaciaAtras2.java:198) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 14:22:54,678  INFO (EncadenamientoHaciaAtras2.java:208) - La hipotesis x es deducible mediante la regla Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 14:22:54,678  INFO (EncadenamientoHaciaAtras2.java:209) - Se incluye x en el conocimiento adquirido hasta el momento.
-2015-09-28 14:22:54,679  INFO (EncadenamientoHaciaAtras2.java:197) - 
-2015-09-28 14:22:54,679  INFO (EncadenamientoHaciaAtras2.java:198) - Continua Iteracion 0. Base de conocimiento:
-2015-09-28 14:22:54,679  INFO (EncadenamientoHaciaAtras2.java:208) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:22:54,679  INFO (EncadenamientoHaciaAtras2.java:209) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 14:22:54,680  INFO (EntryPoint.java:99) - Conocimiento adquirido: [p, q, r, s, x, v]
-2015-09-28 14:22:54,680  INFO (EntryPoint.java:101) - La hipótesis v fue deducida.
-2015-09-28 14:25:48,865  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:25:48,870  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:25:48,870  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:25:48,870  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:25:48,871  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:25:48,873  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:25:48,873  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:25:48,873  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:25:48,874  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:25:48,874  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:25:52,205  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:25:53,015  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:25:53,863  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:25:55,249  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:25:56,353  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:26:02,084  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:26:04,882  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:26:05,505  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:26:05,507  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:26:05,508  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:26:05,508  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:26:05,509  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:26:05,510  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:26:06,497  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:26:08,323  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v]
-2015-09-28 14:26:09,877  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: v
-2015-09-28 14:26:15,603  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:26:32,410  INFO (EncadenamientoHaciaAtras2.java:181) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:26:33,913  INFO (EncadenamientoHaciaAtras2.java:182) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 14:26:41,723  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:26:42,109  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 1. Base de conocimiento:
-2015-09-28 14:26:43,062  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:26:43,064  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:26:43,064  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:26:43,065  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:26:43,066  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:26:43,067  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:26:43,377  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:26:43,834  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v, s]
-2015-09-28 14:26:44,172  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: s
-2015-09-28 14:26:48,532  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:26:56,483  INFO (EncadenamientoHaciaAtras2.java:211) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:26:57,027  INFO (EncadenamientoHaciaAtras2.java:212) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 14:27:29,669  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:27:30,008  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 2. Base de conocimiento:
-2015-09-28 14:27:30,295  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:27:30,295  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:27:30,296  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:27:30,297  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:27:30,298  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:27:30,298  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:27:30,631  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:27:31,107  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 14:27:31,501  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: x
-2015-09-28 14:27:35,076  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:27:40,898  INFO (EncadenamientoHaciaAtras2.java:181) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:27:42,722  INFO (EncadenamientoHaciaAtras2.java:182) - Nueva cola de hipotesis a verificar: [y]
-2015-09-28 14:28:59,348  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:28:59,562  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 3. Base de conocimiento:
-2015-09-28 14:28:59,802  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:28:59,803  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:28:59,803  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:28:59,804  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:28:59,804  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:28:59,804  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:29:00,058  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:29:00,297  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v, x, y]
-2015-09-28 14:29:05,441  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: y
-2015-09-28 14:29:11,451  INFO (EncadenamientoHaciaAtras2.java:222) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 14:29:25,758  INFO (EncadenamientoHaciaAtras2.java:198) - 
-2015-09-28 14:29:26,426  INFO (EncadenamientoHaciaAtras2.java:199) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 14:29:36,692  INFO (EncadenamientoHaciaAtras2.java:214) - La hipotesis x NO es deducible mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:30:06,793  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 14:31:03,166  INFO (EncadenamientoHaciaAtras2.java:198) - 
-2015-09-28 14:31:03,454  INFO (EncadenamientoHaciaAtras2.java:199) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 14:31:09,167  INFO (EncadenamientoHaciaAtras2.java:211) - La hipotesis x es deducible mediante la regla Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 14:31:09,541  INFO (EncadenamientoHaciaAtras2.java:212) - Se incluye x en el conocimiento adquirido hasta el momento.
-2015-09-28 14:31:26,982  INFO (EncadenamientoHaciaAtras2.java:198) - 
-2015-09-28 14:31:27,417  INFO (EncadenamientoHaciaAtras2.java:199) - Continua Iteracion 0. Base de conocimiento:
-2015-09-28 14:31:35,282  INFO (EncadenamientoHaciaAtras2.java:211) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:31:35,990  INFO (EncadenamientoHaciaAtras2.java:212) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 14:31:40,317  INFO (EntryPoint.java:99) - Conocimiento adquirido: [p, q, r, s, x, v]
-2015-09-28 14:31:40,318  INFO (EntryPoint.java:101) - La hipótesis v fue deducida.
-2015-09-28 14:37:24,851  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 14:37:24,854  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:37:24,854  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:37:24,854  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:37:24,855  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:37:24,857  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:37:24,857  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:37:24,857  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 14:37:24,858  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 14:37:24,858  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 14:37:30,604  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:37:31,597  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:37:32,118  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:37:32,624  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 14:37:33,879  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 14:37:39,552  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:37:39,769  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 0. Base de conocimiento:
-2015-09-28 14:37:39,908  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:37:39,909  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:37:39,910  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:37:39,911  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 14:37:39,912  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:37:39,913  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:37:40,092  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:37:40,336  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v]
-2015-09-28 14:37:43,083  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: v
-2015-09-28 14:38:57,718  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:38:59,270  INFO (EncadenamientoHaciaAtras2.java:181) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:38:59,594  INFO (EncadenamientoHaciaAtras2.java:182) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 14:39:07,164  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:39:07,415  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 1. Base de conocimiento:
-2015-09-28 14:39:07,663  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 14:39:07,664  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:39:07,664  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:39:07,665  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:39:07,665  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:39:07,665  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:39:07,903  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 14:39:08,145  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v, s]
-2015-09-28 14:39:08,468  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: s
-2015-09-28 14:39:10,805  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:39:13,941  INFO (EncadenamientoHaciaAtras2.java:210) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:39:19,220  INFO (EncadenamientoHaciaAtras2.java:211) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 14:39:36,842  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:39:37,571  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 2. Base de conocimiento:
-2015-09-28 14:39:38,145  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:39:38,146  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:39:38,147  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:39:38,148  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:39:38,148  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 14:39:38,149  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:39:38,532  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:39:40,092  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 14:39:40,626  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: x
-2015-09-28 14:39:45,387  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:39:47,996  INFO (EncadenamientoHaciaAtras2.java:181) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:39:49,985  INFO (EncadenamientoHaciaAtras2.java:182) - Nueva cola de hipotesis a verificar: [y]
-2015-09-28 14:39:55,134  INFO (EncadenamientoHaciaAtras2.java:149) - 
-2015-09-28 14:39:55,686  INFO (EncadenamientoHaciaAtras2.java:150) - Iteracion 3. Base de conocimiento:
-2015-09-28 14:39:55,929  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 14:39:55,930  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 14:39:55,931  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 14:39:55,932  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:39:55,932  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:39:55,933  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 14:39:56,182  INFO (EncadenamientoHaciaAtras2.java:152) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 14:39:58,578  INFO (EncadenamientoHaciaAtras2.java:153) - Cola de Hipotesis actual a verificar: [v, x, y]
-2015-09-28 14:40:01,269  INFO (EncadenamientoHaciaAtras2.java:154) - Hipotesis actual a verificar: y
-2015-09-28 14:40:10,914  INFO (EncadenamientoHaciaAtras2.java:222) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 14:40:18,986  INFO (EncadenamientoHaciaAtras2.java:197) - 
-2015-09-28 14:40:19,760  INFO (EncadenamientoHaciaAtras2.java:198) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 14:40:26,215  INFO (EncadenamientoHaciaAtras2.java:213) - La hipotesis x NO es deducible mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 14:40:32,771  INFO (EncadenamientoHaciaAtras2.java:214) - Se buscara una nueva regla que permita deducir la hipotesis x
-2015-09-28 14:40:39,868  INFO (EncadenamientoHaciaAtras2.java:168) - Regla seleccionada: Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 14:40:56,027  INFO (EncadenamientoHaciaAtras2.java:210) - La hipotesis x es deducible mediante la regla Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 14:40:58,686  INFO (EncadenamientoHaciaAtras2.java:211) - Se incluye x en el conocimiento adquirido hasta el momento.
-2015-09-28 14:41:29,042  INFO (EncadenamientoHaciaAtras2.java:197) - 
-2015-09-28 14:41:29,897  INFO (EncadenamientoHaciaAtras2.java:198) - Continua Iteracion 0. Base de conocimiento:
-2015-09-28 14:41:36,099  INFO (EncadenamientoHaciaAtras2.java:210) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 14:41:39,465  INFO (EncadenamientoHaciaAtras2.java:211) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 14:41:45,411  INFO (EntryPoint.java:99) - Conocimiento adquirido: [p, q, r, s, x, v]
-2015-09-28 14:41:46,673  INFO (EntryPoint.java:101) - La hipótesis v fue deducida.
-2015-09-28 15:09:45,773  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 15:09:45,777  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:09:45,777  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:09:45,777  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:09:45,777  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:09:45,780  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:09:45,780  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:09:45,780  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 15:09:45,780  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 15:09:45,781  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 15:09:48,602  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:09:52,169  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:09:53,112  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:09:53,955  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:09:55,254  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 15:10:38,994  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 15:10:38,998  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:10:38,998  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:10:38,998  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:10:38,998  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:10:39,001  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:10:39,001  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:10:39,001  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 15:10:39,001  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 15:10:39,002  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 15:10:41,942  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:10:44,532  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:10:45,126  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:10:46,011  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:10:48,746  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 15:12:23,796  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 15:12:23,800  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:12:23,800  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:12:23,800  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:12:23,800  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:12:23,803  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:12:23,803  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:12:23,803  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 15:12:23,803  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 15:12:23,804  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 15:12:26,846  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:12:29,347  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:12:30,443  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:12:31,951  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:12:33,169  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 15:13:01,840  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:13:03,277  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 0. Base de conocimiento:
-2015-09-28 15:13:04,222  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:13:04,224  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:13:04,224  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:13:04,225  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:13:04,226  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:13:04,227  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:13:06,047  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 15:13:07,359  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v]
-2015-09-28 15:13:08,580  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: v
-2015-09-28 15:13:16,715  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:13:34,885  INFO (EncadenamientoHaciaAtras2.java:71) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:13:35,711  INFO (EncadenamientoHaciaAtras2.java:72) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 15:13:47,745  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:13:48,093  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 1. Base de conocimiento:
-2015-09-28 15:13:52,283  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:13:52,284  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:13:52,285  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:13:52,286  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:13:52,287  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:13:52,288  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:13:54,558  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 15:13:55,685  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, s]
-2015-09-28 15:13:57,601  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: s
-2015-09-28 15:14:01,587  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:14:11,470  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:14:13,788  INFO (EncadenamientoHaciaAtras2.java:103) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 15:14:31,594  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:14:32,014  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 2. Base de conocimiento:
-2015-09-28 15:14:32,881  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:14:32,882  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:14:32,882  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:14:32,883  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:14:32,884  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:14:32,885  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:14:33,986  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:14:35,359  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 15:14:36,620  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: x
-2015-09-28 15:14:44,582  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:14:50,557  INFO (EncadenamientoHaciaAtras2.java:71) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:14:53,006  INFO (EncadenamientoHaciaAtras2.java:72) - Nueva cola de hipotesis a verificar: [y]
-2015-09-28 15:15:03,886  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:15:04,238  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 3. Base de conocimiento:
-2015-09-28 15:15:04,762  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:15:04,763  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:15:04,764  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:15:04,764  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:15:04,765  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:15:04,765  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:15:06,165  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:15:07,203  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x, y]
-2015-09-28 15:15:08,963  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: y
-2015-09-28 15:15:15,775  INFO (EncadenamientoHaciaAtras2.java:116) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 15:15:27,565  INFO (EncadenamientoHaciaAtras2.java:88) - 
-2015-09-28 15:15:28,785  INFO (EncadenamientoHaciaAtras2.java:89) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 15:15:35,575  INFO (EncadenamientoHaciaAtras2.java:105) - La hipotesis x NO es deducible mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:15:37,455  INFO (EncadenamientoHaciaAtras2.java:106) - Se buscara una otra regla que permita deducir la hipotesis x
-2015-09-28 15:15:53,288  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:15:53,623  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 4. Base de conocimiento:
-2015-09-28 15:15:54,891  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:15:54,893  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:15:54,894  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:15:54,896  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:15:54,897  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:15:54,899  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:15:56,035  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:15:56,933  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 15:16:11,038  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: x
-2015-09-28 15:16:16,587  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R6, eval=false, premisas=[q], hecho=x]
-2015-09-28 15:16:26,783  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis x es deducible mediante la regla Regla [nombre=R6, eval=true, premisas=[q], hecho=x]
-2015-09-28 15:16:27,228  INFO (EncadenamientoHaciaAtras2.java:103) - Se incluye x en el conocimiento adquirido hasta el momento.
-2015-09-28 15:16:39,914  INFO (EncadenamientoHaciaAtras2.java:88) - 
-2015-09-28 15:16:40,667  INFO (EncadenamientoHaciaAtras2.java:89) - Continua Iteracion 0. Base de conocimiento:
-2015-09-28 15:16:45,090  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis v es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:16:45,792  INFO (EncadenamientoHaciaAtras2.java:103) - Se incluye v en el conocimiento adquirido hasta el momento.
-2015-09-28 15:16:50,191  INFO (EntryPoint.java:100) - Conocimiento adquirido: [p, q, r, s, x, v]
-2015-09-28 15:16:51,466  INFO (EntryPoint.java:102) - La hipótesis v fue deducida.
-2015-09-28 15:18:07,818  INFO (EntryPoint.java:46) - Base de conocimiento:
-2015-09-28 15:18:07,822  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:18:07,822  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:18:07,822  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:18:07,822  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:18:07,825  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:18:07,825  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:18:07,825  INFO (EntryPoint.java:49) - Por favor, seleccione la modalidad para la ejecución: 
-2015-09-28 15:18:07,825  INFO (EntryPoint.java:50) - 1. Encadenamiento hacia adelante.
-2015-09-28 15:18:07,825  INFO (EntryPoint.java:51) - 2. Encadenamiento hacia atras.
-2015-09-28 15:18:11,873  INFO (EntryPoint.java:65) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:18:15,699  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:18:16,503  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:18:18,927  INFO (EntryPoint.java:71) - Ingrese una premisa como conocimiento inicial o 0 para terminar: 
-2015-09-28 15:18:20,076  INFO (EntryPoint.java:79) - Ingrese una hipotesis a verificar: 
-2015-09-28 15:18:24,842  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:18:25,026  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 0. Base de conocimiento:
-2015-09-28 15:18:25,230  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:18:25,231  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:18:25,231  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:18:25,232  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:18:25,233  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:18:25,234  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:18:25,404  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 15:18:25,636  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v]
-2015-09-28 15:18:25,855  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: v
-2015-09-28 15:18:27,782  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R4, eval=false, premisas=[s, x, r], hecho=v]
-2015-09-28 15:18:31,824  INFO (EncadenamientoHaciaAtras2.java:71) - La hipotesis v no es deducible en forma completa mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:18:32,188  INFO (EncadenamientoHaciaAtras2.java:72) - Nueva cola de hipotesis a verificar: [s, x]
-2015-09-28 15:18:36,012  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:18:36,224  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 1. Base de conocimiento:
-2015-09-28 15:18:36,421  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:18:36,422  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:18:36,422  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:18:36,423  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:18:36,424  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:18:36,425  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:18:36,669  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r]
-2015-09-28 15:18:36,919  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, s]
-2015-09-28 15:18:37,166  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: s
-2015-09-28 15:18:38,103  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R1, eval=false, premisas=[p, q], hecho=s]
-2015-09-28 15:18:43,760  INFO (EncadenamientoHaciaAtras2.java:102) - La hipotesis s es deducible mediante la regla Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:18:44,695  INFO (EncadenamientoHaciaAtras2.java:103) - Se incluye s en el conocimiento adquirido hasta el momento.
-2015-09-28 15:18:52,736  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:18:52,926  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 2. Base de conocimiento:
-2015-09-28 15:18:53,132  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:18:53,133  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:18:53,134  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:18:53,135  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:18:53,136  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:18:53,137  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:18:53,388  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:18:54,437  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 15:18:54,912  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: x
-2015-09-28 15:18:57,547  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R5, eval=false, premisas=[s, y], hecho=x]
-2015-09-28 15:18:59,214  INFO (EncadenamientoHaciaAtras2.java:71) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:19:02,076  INFO (EncadenamientoHaciaAtras2.java:72) - Nueva cola de hipotesis a verificar: [y]
-2015-09-28 15:19:09,607  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:19:09,822  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 3. Base de conocimiento:
-2015-09-28 15:19:10,042  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:19:10,043  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:19:10,044  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:19:10,045  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:19:10,045  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:19:10,046  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:19:10,233  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:19:10,439  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x, y]
-2015-09-28 15:19:10,666  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: y
-2015-09-28 15:19:12,145  INFO (EncadenamientoHaciaAtras2.java:116) - No existe ninguna regla que permita deducir la hipotesis y
-2015-09-28 15:19:16,405  INFO (EncadenamientoHaciaAtras2.java:88) - 
-2015-09-28 15:19:17,068  INFO (EncadenamientoHaciaAtras2.java:89) - Continua Iteracion 2. Base de conocimiento:
-2015-09-28 15:19:21,872  INFO (EncadenamientoHaciaAtras2.java:105) - La hipotesis x NO es deducible mediante la regla Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:19:22,206  INFO (EncadenamientoHaciaAtras2.java:106) - Se buscara una otra regla que permita deducir la hipotesis x
-2015-09-28 15:19:31,517  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:19:31,819  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 4. Base de conocimiento:
-2015-09-28 15:19:32,071  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:19:32,072  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:19:32,072  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:19:32,073  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:19:32,073  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:19:32,073  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:19:32,742  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:19:33,320  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 15:19:34,096  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: x
-2015-09-28 15:19:36,585  INFO (EncadenamientoHaciaAtras2.java:62) - Regla seleccionada: Regla [nombre=R6, eval=false, premisas=[a], hecho=x]
-2015-09-28 15:19:41,730  INFO (EncadenamientoHaciaAtras2.java:71) - La hipotesis x no es deducible en forma completa mediante la regla Regla [nombre=R6, eval=true, premisas=[a], hecho=x]
-2015-09-28 15:19:42,046  INFO (EncadenamientoHaciaAtras2.java:72) - Nueva cola de hipotesis a verificar: [a]
-2015-09-28 15:19:46,852  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:19:47,137  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 5. Base de conocimiento:
-2015-09-28 15:19:47,438  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:19:47,439  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:19:47,440  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:19:47,440  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:19:47,441  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:19:47,442  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=true, premisas=[a], hecho=x]
-2015-09-28 15:19:47,698  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:19:48,811  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x, a]
-2015-09-28 15:19:49,884  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: a
-2015-09-28 15:19:53,145  INFO (EncadenamientoHaciaAtras2.java:116) - No existe ninguna regla que permita deducir la hipotesis a
-2015-09-28 15:19:58,024  INFO (EncadenamientoHaciaAtras2.java:88) - 
-2015-09-28 15:19:58,901  INFO (EncadenamientoHaciaAtras2.java:89) - Continua Iteracion 4. Base de conocimiento:
-2015-09-28 15:20:01,400  INFO (EncadenamientoHaciaAtras2.java:105) - La hipotesis x NO es deducible mediante la regla Regla [nombre=R6, eval=true, premisas=[a], hecho=x]
-2015-09-28 15:20:02,422  INFO (EncadenamientoHaciaAtras2.java:106) - Se buscara una otra regla que permita deducir la hipotesis x
-2015-09-28 15:20:08,478  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:20:08,780  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 6. Base de conocimiento:
-2015-09-28 15:20:09,097  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:20:09,099  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:20:09,099  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:20:09,100  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:20:09,101  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:20:09,102  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=true, premisas=[a], hecho=x]
-2015-09-28 15:20:09,526  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:20:09,873  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v, x]
-2015-09-28 15:20:10,190  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: x
-2015-09-28 15:20:14,036  INFO (EncadenamientoHaciaAtras2.java:116) - No existe ninguna regla que permita deducir la hipotesis x
-2015-09-28 15:20:22,635  INFO (EncadenamientoHaciaAtras2.java:88) - 
-2015-09-28 15:20:23,081  INFO (EncadenamientoHaciaAtras2.java:89) - Continua Iteracion 0. Base de conocimiento:
-2015-09-28 15:20:25,870  INFO (EncadenamientoHaciaAtras2.java:105) - La hipotesis v NO es deducible mediante la regla Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:20:26,678  INFO (EncadenamientoHaciaAtras2.java:106) - Se buscara una otra regla que permita deducir la hipotesis v
-2015-09-28 15:20:32,095  INFO (EncadenamientoHaciaAtras2.java:49) - 
-2015-09-28 15:20:32,404  INFO (EncadenamientoHaciaAtras2.java:50) - Iteracion 7. Base de conocimiento:
-2015-09-28 15:20:33,022  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R1, eval=true, premisas=[p, q], hecho=s]
-2015-09-28 15:20:33,023  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R2, eval=false, premisas=[r], hecho=t]
-2015-09-28 15:20:33,024  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R3, eval=false, premisas=[s, t], hecho=u]
-2015-09-28 15:20:33,025  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R4, eval=true, premisas=[s, x, r], hecho=v]
-2015-09-28 15:20:33,025  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R5, eval=true, premisas=[s, y], hecho=x]
-2015-09-28 15:20:33,026  INFO (BaseDeConocimiento.java:65) - Regla [nombre=R6, eval=true, premisas=[a], hecho=x]
-2015-09-28 15:20:35,610  INFO (EncadenamientoHaciaAtras2.java:52) - Conocimiento adquirido hasta el momento: [p, q, r, s]
-2015-09-28 15:20:36,165  INFO (EncadenamientoHaciaAtras2.java:53) - Cola de Hipotesis actual a verificar: [v]
-2015-09-28 15:20:36,464  INFO (EncadenamientoHaciaAtras2.java:54) - Hipotesis actual a verificar: v
-2015-09-28 15:20:38,430  INFO (EncadenamientoHaciaAtras2.java:116) - No existe ninguna regla que permita deducir la hipotesis v
-2015-09-28 15:20:43,890  INFO (EntryPoint.java:100) - Conocimiento adquirido: [p, q, r, s]
-2015-09-28 15:20:47,574  INFO (EntryPoint.java:104) - La hipótesis v no fue deducida.
+2015-10-19 12:20:03,679  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 12:20:03,727  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 12:20:03,727  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 12:20:03,728  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 12:20:15,586  INFO (EntryPoint.java:204) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:20:22,945  INFO (EntryPoint.java:210) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:20:26,939  INFO (EntryPoint.java:210) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:20:29,074  INFO (EntryPoint.java:210) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:20:30,995  INFO (EntryPoint.java:189) - Ingrese el nombre de la nueva premisa o 0 para terminar: 
+2015-10-19 12:20:40,495  INFO (EntryPoint.java:195) - Ingrese el nombre de la nueva premisa o 0 para terminar: 
+2015-10-19 12:20:47,463  INFO (EntryPoint.java:195) - Ingrese el nombre de la nueva premisa o 0 para terminar: 
+2015-10-19 12:20:49,866  INFO (EntryPoint.java:282) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:20:56,180  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:20:56,180  INFO (EntryPoint.java:222) - 1) ----a--->
+2015-10-19 12:20:56,181  INFO (EntryPoint.java:222) - 2) ----b--->
+2015-10-19 12:20:56,181  INFO (EntryPoint.java:222) - 3) ----c--->
+2015-10-19 12:20:56,184  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:21:42,244  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 12:21:42,247  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 12:21:42,247  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 12:21:42,247  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 12:22:03,224  INFO (EntryPoint.java:204) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:22:15,866  INFO (EntryPoint.java:210) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:22:45,394  INFO (EntryPoint.java:210) - Ingrese el nombre de la nueva relacion o 0 para terminar: 
+2015-10-19 12:22:56,422  INFO (EntryPoint.java:189) - Ingrese el nombre de la nueva premisa o 0 para terminar: 
+2015-10-19 12:24:17,155  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 12:24:17,158  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 12:24:17,159  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 12:24:17,159  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 12:24:26,231  INFO (EntryPoint.java:204) - Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: 
+2015-10-19 12:24:32,619  INFO (EntryPoint.java:210) - Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: 
+2015-10-19 12:24:40,344  INFO (EntryPoint.java:210) - Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: 
+2015-10-19 12:24:48,923  INFO (EntryPoint.java:210) - Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: 
+2015-10-19 12:24:54,221  INFO (EntryPoint.java:189) - Ingrese el nombre de la nueva PREMISA o 0 para terminar: 
+2015-10-19 12:24:58,010  INFO (EntryPoint.java:195) - Ingrese el nombre de la nueva PREMISA o 0 para terminar: 
+2015-10-19 12:25:00,171  INFO (EntryPoint.java:195) - Ingrese el nombre de la nueva PREMISA o 0 para terminar: 
+2015-10-19 12:25:01,869  INFO (EntryPoint.java:195) - Ingrese el nombre de la nueva PREMISA o 0 para terminar: 
+2015-10-19 12:25:05,748  INFO (EntryPoint.java:195) - Ingrese el nombre de la nueva PREMISA o 0 para terminar: 
+2015-10-19 12:25:08,633  INFO (EntryPoint.java:282) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:25:14,288  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:25:14,289  INFO (EntryPoint.java:222) - 1) ----es_un--->
+2015-10-19 12:25:14,293  INFO (EntryPoint.java:222) - 2) ----mayor_que--->
+2015-10-19 12:25:14,294  INFO (EntryPoint.java:222) - 3) ----menor_que--->
+2015-10-19 12:25:14,294  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:25:20,573  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----es_un--->YY
+2015-10-19 12:25:20,574  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:25:20,574  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:25:20,574  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:25:20,574  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:25:20,575  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:25:31,705  INFO (EntryPoint.java:262) - Seleccione la segunda premisa: a ----es_un--->YY
+2015-10-19 12:25:31,706  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:25:31,706  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:25:31,706  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:25:31,707  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:25:31,707  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:25:57,443  INFO (EntryPoint.java:291) - Se ha agregado la nueva relacion: a	----es_un--->	a1
+2015-10-19 12:25:57,443  INFO (EntryPoint.java:292) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:26:29,440  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:26:29,440  INFO (EntryPoint.java:222) - 1) ----es_un--->
+2015-10-19 12:26:29,443  INFO (EntryPoint.java:222) - 2) ----mayor_que--->
+2015-10-19 12:26:29,443  INFO (EntryPoint.java:222) - 3) ----menor_que--->
+2015-10-19 12:26:29,444  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:26:44,442  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----mayor_que--->YY
+2015-10-19 12:26:44,442  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:26:44,443  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:26:44,443  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:26:44,443  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:26:44,443  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:26:49,309  INFO (EntryPoint.java:262) - Seleccione la segunda premisa: b ----mayor_que--->YY
+2015-10-19 12:26:49,310  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:26:49,310  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:26:49,311  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:26:49,312  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:26:49,312  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:26:54,750  INFO (EntryPoint.java:291) - Se ha agregado la nueva relacion: b	----mayor_que--->	a
+2015-10-19 12:26:54,750  INFO (EntryPoint.java:292) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:26:57,765  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:26:57,766  INFO (EntryPoint.java:222) - 1) ----es_un--->
+2015-10-19 12:26:57,766  INFO (EntryPoint.java:222) - 2) ----mayor_que--->
+2015-10-19 12:26:57,766  INFO (EntryPoint.java:222) - 3) ----menor_que--->
+2015-10-19 12:26:57,767  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:27:04,645  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----mayor_que--->YY
+2015-10-19 12:27:04,646  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:27:04,646  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:27:04,646  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:27:04,647  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:27:04,647  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:27:31,708  INFO (EntryPoint.java:272) - Seleccion incorrecta!
+2015-10-19 12:27:31,709  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----mayor_que--->YY
+2015-10-19 12:27:31,709  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:27:31,709  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:27:31,709  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:27:31,709  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:27:31,709  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:27:37,594  INFO (EntryPoint.java:272) - Seleccion incorrecta!
+2015-10-19 12:27:37,595  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----mayor_que--->YY
+2015-10-19 12:27:37,595  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:27:37,595  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:27:37,596  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:27:37,596  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:27:37,596  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:27:44,282  INFO (EntryPoint.java:262) - Seleccione la segunda premisa: c ----mayor_que--->YY
+2015-10-19 12:27:44,282  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:27:44,283  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:27:44,283  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:27:44,283  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:27:44,283  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:27:48,530  INFO (EntryPoint.java:291) - Se ha agregado la nueva relacion: c	----mayor_que--->	b
+2015-10-19 12:27:48,530  INFO (EntryPoint.java:292) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:27:56,936  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:27:56,937  INFO (EntryPoint.java:222) - 1) ----es_un--->
+2015-10-19 12:27:56,937  INFO (EntryPoint.java:222) - 2) ----mayor_que--->
+2015-10-19 12:27:56,937  INFO (EntryPoint.java:222) - 3) ----menor_que--->
+2015-10-19 12:27:56,937  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:28:04,098  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----es_un--->YY
+2015-10-19 12:28:04,098  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:28:04,099  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:28:04,099  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:28:04,099  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:28:04,099  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:28:07,430  INFO (EntryPoint.java:262) - Seleccione la segunda premisa: a1 ----es_un--->YY
+2015-10-19 12:28:07,430  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:28:07,430  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:28:07,430  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:28:07,431  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:28:07,431  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:28:09,790  INFO (EntryPoint.java:291) - Se ha agregado la nueva relacion: a1	----es_un--->	a
+2015-10-19 12:28:09,791  INFO (EntryPoint.java:292) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:28:13,064  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:28:13,065  INFO (EntryPoint.java:222) - 1) ----es_un--->
+2015-10-19 12:28:13,065  INFO (EntryPoint.java:222) - 2) ----mayor_que--->
+2015-10-19 12:28:13,065  INFO (EntryPoint.java:222) - 3) ----menor_que--->
+2015-10-19 12:28:13,065  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:28:24,667  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----menor_que--->YY
+2015-10-19 12:28:24,668  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:28:24,668  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:28:24,668  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:28:24,669  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:28:24,669  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:28:31,219  INFO (EntryPoint.java:262) - Seleccione la segunda premisa: a ----menor_que--->YY
+2015-10-19 12:28:31,220  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:28:31,220  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:28:31,220  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:28:31,221  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:28:31,221  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:28:39,834  INFO (EntryPoint.java:291) - Se ha agregado la nueva relacion: a	----menor_que--->	c
+2015-10-19 12:28:39,835  INFO (EntryPoint.java:292) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:28:44,594  INFO (EntryPoint.java:230) - Elija el tipo de nueva relacion de la red: 
+2015-10-19 12:28:44,595  INFO (EntryPoint.java:222) - 1) ----es_un--->
+2015-10-19 12:28:44,595  INFO (EntryPoint.java:222) - 2) ----mayor_que--->
+2015-10-19 12:28:44,596  INFO (EntryPoint.java:222) - 3) ----menor_que--->
+2015-10-19 12:28:44,596  INFO (EntryPoint.java:232) - Ingrese el numero: 
+2015-10-19 12:29:20,358  INFO (EntryPoint.java:260) - Seleccione la primer premisa: XX ----mayor_que--->YY
+2015-10-19 12:29:20,358  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:29:20,359  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:29:20,359  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:29:20,359  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:29:20,359  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:29:36,800  INFO (EntryPoint.java:262) - Seleccione la segunda premisa: c ----mayor_que--->YY
+2015-10-19 12:29:36,801  INFO (EntryPoint.java:250) - 1) a
+2015-10-19 12:29:36,801  INFO (EntryPoint.java:250) - 2) b
+2015-10-19 12:29:36,801  INFO (EntryPoint.java:250) - 3) c
+2015-10-19 12:29:36,801  INFO (EntryPoint.java:250) - 4) a1
+2015-10-19 12:29:36,801  INFO (EntryPoint.java:265) - Ingrese el numero: 
+2015-10-19 12:29:44,598  INFO (EntryPoint.java:291) - Se ha agregado la nueva relacion: c	----mayor_que--->	a
+2015-10-19 12:29:44,600  INFO (EntryPoint.java:292) - Agrega una nueva relacion? (S/N)
+2015-10-19 12:29:47,174  INFO (EntryPoint.java:183) - Red Semantica creada: 
+2015-10-19 12:29:47,175  INFO (RedSemantica.java:61) - Relaciones de 'a'
+2015-10-19 12:29:47,175  INFO (RedSemantica.java:63) - a	----es_un--->	a1
+2015-10-19 12:29:47,175  INFO (RedSemantica.java:63) - a	----menor_que--->	c
+2015-10-19 12:29:47,176  INFO (RedSemantica.java:65) - 
+2015-10-19 12:29:47,176  INFO (RedSemantica.java:61) - Relaciones de 'a1'
+2015-10-19 12:29:47,176  INFO (RedSemantica.java:63) - a1	----es_un--->	a
+2015-10-19 12:29:47,176  INFO (RedSemantica.java:65) - 
+2015-10-19 12:29:47,176  INFO (RedSemantica.java:61) - Relaciones de 'b'
+2015-10-19 12:29:47,177  INFO (RedSemantica.java:63) - b	----mayor_que--->	a
+2015-10-19 12:29:47,177  INFO (RedSemantica.java:65) - 
+2015-10-19 12:29:47,177  INFO (RedSemantica.java:61) - Relaciones de 'c'
+2015-10-19 12:29:47,177  INFO (RedSemantica.java:63) - c	----mayor_que--->	b
+2015-10-19 12:29:47,177  INFO (RedSemantica.java:63) - c	----mayor_que--->	a
+2015-10-19 12:29:47,178  INFO (RedSemantica.java:65) - 
+2015-10-19 12:52:05,476  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 12:52:05,479  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 12:52:05,479  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 12:52:05,479  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 12:52:12,108  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 12:52:16,303  INFO (EntryPoint.java:319) - 
+2015-10-19 12:52:16,303  INFO (EntryPoint.java:320) - Tipo de Relaciones del set de datos: 
+2015-10-19 12:52:16,304  INFO (EntryPoint.java:231) - 1) ----es_un--->
+2015-10-19 12:52:16,304  INFO (EntryPoint.java:231) - 2) ----mayor_que--->
+2015-10-19 12:52:16,304  INFO (EntryPoint.java:231) - 3) ----menor_que--->
+2015-10-19 12:52:16,307  INFO (EntryPoint.java:335) - 
+2015-10-19 12:52:16,307  INFO (EntryPoint.java:336) - Premisas del set de datos: 
+2015-10-19 12:52:16,307  INFO (EntryPoint.java:259) - 1) a
+2015-10-19 12:52:16,307  INFO (EntryPoint.java:259) - 2) b
+2015-10-19 12:52:16,308  INFO (EntryPoint.java:259) - 3) c
+2015-10-19 12:52:16,308  INFO (EntryPoint.java:259) - 4) a1
+2015-10-19 12:52:16,312  INFO (EntryPoint.java:259) - 5) b1
+2015-10-19 12:52:23,092  INFO (EntryPoint.java:192) - Red Semantica creada: 
+2015-10-19 12:52:23,094  INFO (RedSemantica.java:61) - Relaciones de 'a'
+2015-10-19 12:52:23,094  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 12:52:23,095  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 12:52:23,095  INFO (RedSemantica.java:65) - 
+2015-10-19 12:52:23,095  INFO (RedSemantica.java:61) - Relaciones de 'a1'
+2015-10-19 12:52:23,095  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 12:52:23,096  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 12:52:23,096  INFO (RedSemantica.java:65) - 
+2015-10-19 12:52:23,096  INFO (RedSemantica.java:61) - Relaciones de 'b'
+2015-10-19 12:52:23,096  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 12:52:23,097  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 12:52:23,097  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 12:52:23,097  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 12:52:23,097  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 12:52:23,097  INFO (RedSemantica.java:65) - 
+2015-10-19 12:52:23,098  INFO (RedSemantica.java:61) - Relaciones de 'b1'
+2015-10-19 12:52:23,098  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 12:52:23,098  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 12:52:23,098  INFO (RedSemantica.java:65) - 
+2015-10-19 12:56:39,751  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 12:56:39,754  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 12:56:39,754  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 12:56:39,754  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 12:56:53,202  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 12:56:56,878  INFO (EntryPoint.java:328) - 
+2015-10-19 12:56:56,878  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 12:56:56,879  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 12:56:56,879  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 12:56:56,879  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 12:56:56,881  INFO (EntryPoint.java:344) - 
+2015-10-19 12:56:56,881  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 12:56:56,882  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 12:56:56,882  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 12:56:56,882  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 12:56:56,882  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 12:56:56,886  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 12:57:05,140  INFO (EntryPoint.java:192) - 
+2015-10-19 12:57:05,141  INFO (EntryPoint.java:193) - RED SEMANTICA CREADA: 
+2015-10-19 12:57:05,142  INFO (EntryPoint.java:195) - 
+2015-10-19 12:57:05,142  INFO (EntryPoint.java:196) - Red Semantica creada agrupada por premisa: 
+2015-10-19 12:57:05,143  INFO (RedSemantica.java:61) - Relaciones de 'a'
+2015-10-19 12:57:05,143  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 12:57:05,143  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 12:57:05,144  INFO (RedSemantica.java:65) - 
+2015-10-19 12:57:05,144  INFO (RedSemantica.java:61) - Relaciones de 'a1'
+2015-10-19 12:57:05,144  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 12:57:05,144  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 12:57:05,145  INFO (RedSemantica.java:65) - 
+2015-10-19 12:57:05,147  INFO (RedSemantica.java:61) - Relaciones de 'b'
+2015-10-19 12:57:05,147  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 12:57:05,147  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 12:57:05,147  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 12:57:05,148  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 12:57:05,148  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 12:57:05,151  INFO (RedSemantica.java:65) - 
+2015-10-19 12:57:05,151  INFO (RedSemantica.java:61) - Relaciones de 'b1'
+2015-10-19 12:57:05,152  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 12:57:05,153  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 12:57:05,157  INFO (RedSemantica.java:65) - 
+2015-10-19 12:57:05,157  INFO (EntryPoint.java:199) - 
+2015-10-19 12:57:05,157  INFO (EntryPoint.java:200) - Red Semantica creada agrupada por relacion: 
+2015-10-19 12:57:05,157  INFO (RedSemantica.java:75) - Relacion de tipo 'es_un'
+2015-10-19 12:57:05,158  INFO (RedSemantica.java:77) - a----es_un--->a1
+2015-10-19 12:57:05,159  INFO (RedSemantica.java:77) - b----es_un--->b1
+2015-10-19 12:57:05,159  INFO (RedSemantica.java:77) - b1----es_un--->b
+2015-10-19 12:57:05,159  INFO (RedSemantica.java:77) - a1----es_un--->a
+2015-10-19 12:57:05,159  INFO (RedSemantica.java:79) - 
+2015-10-19 12:57:05,160  INFO (RedSemantica.java:75) - Relacion de tipo 'mayor_que'
+2015-10-19 12:57:05,166  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 12:57:05,167  INFO (RedSemantica.java:77) - b----mayor_que--->a1
+2015-10-19 12:57:05,167  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 12:57:05,167  INFO (RedSemantica.java:77) - b1----mayor_que--->a
+2015-10-19 12:57:05,167  INFO (RedSemantica.java:79) - 
+2015-10-19 12:57:05,168  INFO (RedSemantica.java:75) - Relacion de tipo 'menor_que'
+2015-10-19 12:57:05,168  INFO (RedSemantica.java:77) - a----menor_que--->b
+2015-10-19 12:57:05,169  INFO (RedSemantica.java:77) - b----menor_que--->c
+2015-10-19 12:57:05,169  INFO (RedSemantica.java:77) - a1----menor_que--->c
+2015-10-19 12:57:05,170  INFO (RedSemantica.java:79) - 
+2015-10-19 13:00:28,008  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 13:00:28,012  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 13:00:28,012  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 13:00:28,012  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 13:00:31,566  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 13:00:38,172  INFO (EntryPoint.java:328) - 
+2015-10-19 13:00:38,173  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 13:00:38,173  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 13:00:38,173  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 13:00:38,174  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 13:00:38,175  INFO (EntryPoint.java:344) - 
+2015-10-19 13:00:38,176  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 13:00:38,176  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 13:00:38,176  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 13:00:38,176  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 13:00:38,177  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 13:00:38,180  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 13:00:38,183  INFO (EntryPoint.java:192) - 
+2015-10-19 13:00:38,183  INFO (EntryPoint.java:193) - RED SEMANTICA CREADA: 
+2015-10-19 13:00:38,184  INFO (EntryPoint.java:195) - 
+2015-10-19 13:00:38,184  INFO (EntryPoint.java:196) - Red Semantica creada agrupada por premisa: 
+2015-10-19 13:00:38,185  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a'
+2015-10-19 13:00:38,185  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 13:00:38,185  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 13:00:38,185  INFO (RedSemantica.java:65) - 
+2015-10-19 13:00:38,186  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a1'
+2015-10-19 13:00:38,186  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 13:00:38,186  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 13:00:38,186  INFO (RedSemantica.java:65) - 
+2015-10-19 13:00:38,187  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b'
+2015-10-19 13:00:38,187  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 13:00:38,187  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:00:38,187  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 13:00:38,187  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:00:38,188  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 13:00:38,188  INFO (RedSemantica.java:65) - 
+2015-10-19 13:00:38,189  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b1'
+2015-10-19 13:00:38,189  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 13:00:38,189  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 13:00:38,189  INFO (RedSemantica.java:65) - 
+2015-10-19 13:00:38,190  INFO (EntryPoint.java:199) - 
+2015-10-19 13:00:38,190  INFO (EntryPoint.java:200) - Red Semantica creada agrupada por relacion: 
+2015-10-19 13:00:38,190  INFO (RedSemantica.java:75) - Relacion de tipo 'es_un'
+2015-10-19 13:00:38,190  INFO (RedSemantica.java:77) - a----es_un--->a1
+2015-10-19 13:00:38,190  INFO (RedSemantica.java:77) - b----es_un--->b1
+2015-10-19 13:00:38,191  INFO (RedSemantica.java:77) - b1----es_un--->b
+2015-10-19 13:00:38,191  INFO (RedSemantica.java:77) - a1----es_un--->a
+2015-10-19 13:00:38,191  INFO (RedSemantica.java:79) - 
+2015-10-19 13:00:38,191  INFO (RedSemantica.java:75) - Relacion de tipo 'mayor_que'
+2015-10-19 13:00:38,191  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:00:38,192  INFO (RedSemantica.java:77) - b----mayor_que--->a1
+2015-10-19 13:00:38,192  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:00:38,192  INFO (RedSemantica.java:77) - b1----mayor_que--->a
+2015-10-19 13:00:38,192  INFO (RedSemantica.java:79) - 
+2015-10-19 13:00:38,192  INFO (RedSemantica.java:75) - Relacion de tipo 'menor_que'
+2015-10-19 13:00:38,193  INFO (RedSemantica.java:77) - a----menor_que--->b
+2015-10-19 13:00:38,193  INFO (RedSemantica.java:77) - b----menor_que--->c
+2015-10-19 13:00:38,193  INFO (RedSemantica.java:77) - a1----menor_que--->c
+2015-10-19 13:00:38,193  INFO (RedSemantica.java:79) - 
+2015-10-19 13:03:49,796  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 13:03:49,800  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 13:03:49,800  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 13:03:49,800  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 13:03:52,226  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 13:03:54,628  INFO (EntryPoint.java:328) - 
+2015-10-19 13:03:54,628  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 13:03:54,629  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 13:03:54,629  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 13:03:54,629  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 13:03:54,631  INFO (EntryPoint.java:344) - 
+2015-10-19 13:03:54,632  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 13:03:54,632  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 13:03:54,632  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 13:03:54,632  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 13:03:54,633  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 13:03:54,636  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 13:03:54,638  INFO (EntryPoint.java:370) - 
+2015-10-19 13:03:54,639  INFO (EntryPoint.java:371) - Relaciones del set de datos: 
+2015-10-19 13:03:54,641  INFO (EntryPoint.java:192) - 
+2015-10-19 13:03:54,641  INFO (EntryPoint.java:193) - RED SEMANTICA CREADA: 
+2015-10-19 13:03:54,642  INFO (EntryPoint.java:195) - 
+2015-10-19 13:03:54,642  INFO (EntryPoint.java:196) - Red Semantica agrupada por PREMISA: 
+2015-10-19 13:03:54,643  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a'
+2015-10-19 13:03:54,643  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 13:03:54,644  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 13:03:54,644  INFO (RedSemantica.java:65) - 
+2015-10-19 13:03:54,644  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a1'
+2015-10-19 13:03:54,644  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 13:03:54,645  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 13:03:54,645  INFO (RedSemantica.java:65) - 
+2015-10-19 13:03:54,645  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b'
+2015-10-19 13:03:54,645  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 13:03:54,646  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:03:54,646  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 13:03:54,646  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:03:54,647  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 13:03:54,647  INFO (RedSemantica.java:65) - 
+2015-10-19 13:03:54,647  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b1'
+2015-10-19 13:03:54,647  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 13:03:54,648  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 13:03:54,648  INFO (RedSemantica.java:65) - 
+2015-10-19 13:03:54,648  INFO (EntryPoint.java:199) - 
+2015-10-19 13:03:54,650  INFO (EntryPoint.java:200) - Red Semantica agrupada por TIPO DE RELACION: 
+2015-10-19 13:03:54,650  INFO (RedSemantica.java:75) - Relacion de tipo 'es_un'
+2015-10-19 13:03:54,650  INFO (RedSemantica.java:77) - a----es_un--->a1
+2015-10-19 13:03:54,650  INFO (RedSemantica.java:77) - b----es_un--->b1
+2015-10-19 13:03:54,651  INFO (RedSemantica.java:77) - b1----es_un--->b
+2015-10-19 13:03:54,651  INFO (RedSemantica.java:77) - a1----es_un--->a
+2015-10-19 13:03:54,651  INFO (RedSemantica.java:79) - 
+2015-10-19 13:03:54,651  INFO (RedSemantica.java:75) - Relacion de tipo 'mayor_que'
+2015-10-19 13:03:54,651  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:77) - b----mayor_que--->a1
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:77) - b1----mayor_que--->a
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:79) - 
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:75) - Relacion de tipo 'menor_que'
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:77) - a----menor_que--->b
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:77) - b----menor_que--->c
+2015-10-19 13:03:54,652  INFO (RedSemantica.java:77) - a1----menor_que--->c
+2015-10-19 13:03:54,653  INFO (RedSemantica.java:79) - 
+2015-10-19 13:04:30,595  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 13:04:30,599  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 13:04:30,600  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 13:04:30,600  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 13:04:32,690  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 13:04:33,916  INFO (EntryPoint.java:328) - 
+2015-10-19 13:04:33,917  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 13:04:33,917  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 13:04:33,918  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 13:04:33,918  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 13:04:33,922  INFO (EntryPoint.java:344) - 
+2015-10-19 13:04:33,922  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 13:04:33,923  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 13:04:33,923  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 13:04:33,923  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 13:04:33,923  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 13:04:33,928  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 13:04:33,929  INFO (EntryPoint.java:370) - 
+2015-10-19 13:04:36,146  INFO (EntryPoint.java:371) - Relaciones del set de datos: 
+2015-10-19 13:05:04,810  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 13:05:04,814  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 13:05:04,814  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 13:05:04,815  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 13:05:06,901  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 13:05:08,539  INFO (EntryPoint.java:328) - 
+2015-10-19 13:05:08,539  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 13:05:08,540  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 13:05:08,540  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 13:05:08,540  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 13:05:08,541  INFO (EntryPoint.java:344) - 
+2015-10-19 13:05:08,541  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 13:05:08,541  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 13:05:08,541  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 13:05:08,541  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 13:05:08,542  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 13:05:08,544  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 13:05:08,545  INFO (EntryPoint.java:370) - 
+2015-10-19 13:05:11,595  INFO (EntryPoint.java:371) - Relaciones del set de datos: 
+2015-10-19 13:05:12,729  INFO (EntryPoint.java:373) - a----es_un--->a1
+2015-10-19 13:05:13,321  INFO (EntryPoint.java:373) - a----menor_que--->b
+2015-10-19 13:05:13,779  INFO (EntryPoint.java:373) - b----menor_que--->c
+2015-10-19 13:05:14,202  INFO (EntryPoint.java:373) - b----mayor_que--->a
+2015-10-19 13:05:14,615  INFO (EntryPoint.java:373) - b----mayor_que--->a1
+2015-10-19 13:05:15,006  INFO (EntryPoint.java:373) - b----mayor_que--->a
+2015-10-19 13:05:15,456  INFO (EntryPoint.java:373) - b----es_un--->b1
+2015-10-19 13:05:15,875  INFO (EntryPoint.java:373) - b1----es_un--->b
+2015-10-19 13:05:16,285  INFO (EntryPoint.java:373) - a1----es_un--->a
+2015-10-19 13:05:16,721  INFO (EntryPoint.java:373) - a1----menor_que--->c
+2015-10-19 13:05:17,152  INFO (EntryPoint.java:373) - b1----mayor_que--->a
+2015-10-19 13:05:20,371  INFO (EntryPoint.java:192) - 
+2015-10-19 13:05:20,373  INFO (EntryPoint.java:193) - RED SEMANTICA CREADA: 
+2015-10-19 13:05:20,373  INFO (EntryPoint.java:195) - 
+2015-10-19 13:05:20,373  INFO (EntryPoint.java:196) - Red Semantica agrupada por PREMISA: 
+2015-10-19 13:05:20,374  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a'
+2015-10-19 13:05:20,374  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 13:05:20,374  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 13:05:20,374  INFO (RedSemantica.java:65) - 
+2015-10-19 13:05:20,374  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a1'
+2015-10-19 13:05:20,374  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:65) - 
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b'
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 13:05:20,375  INFO (RedSemantica.java:65) - 
+2015-10-19 13:05:20,376  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b1'
+2015-10-19 13:05:20,376  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 13:05:20,376  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 13:05:20,376  INFO (RedSemantica.java:65) - 
+2015-10-19 13:05:20,376  INFO (EntryPoint.java:199) - 
+2015-10-19 13:05:20,376  INFO (EntryPoint.java:200) - Red Semantica agrupada por TIPO DE RELACION: 
+2015-10-19 13:05:20,376  INFO (RedSemantica.java:75) - Relacion de tipo 'es_un'
+2015-10-19 13:05:20,376  INFO (RedSemantica.java:77) - a----es_un--->a1
+2015-10-19 13:05:20,377  INFO (RedSemantica.java:77) - b----es_un--->b1
+2015-10-19 13:05:20,377  INFO (RedSemantica.java:77) - b1----es_un--->b
+2015-10-19 13:05:20,377  INFO (RedSemantica.java:77) - a1----es_un--->a
+2015-10-19 13:05:20,377  INFO (RedSemantica.java:79) - 
+2015-10-19 13:05:20,379  INFO (RedSemantica.java:75) - Relacion de tipo 'mayor_que'
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:77) - b----mayor_que--->a1
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:77) - b1----mayor_que--->a
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:79) - 
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:75) - Relacion de tipo 'menor_que'
+2015-10-19 13:05:20,380  INFO (RedSemantica.java:77) - a----menor_que--->b
+2015-10-19 13:05:20,381  INFO (RedSemantica.java:77) - b----menor_que--->c
+2015-10-19 13:05:20,387  INFO (RedSemantica.java:77) - a1----menor_que--->c
+2015-10-19 13:05:20,387  INFO (RedSemantica.java:79) - 
+2015-10-19 13:07:19,285  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 13:07:19,288  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 13:07:19,288  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 13:07:19,288  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 13:07:21,666  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 13:07:23,694  INFO (EntryPoint.java:328) - 
+2015-10-19 13:07:23,694  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 13:07:23,695  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 13:07:23,695  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 13:07:23,695  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 13:07:23,697  INFO (EntryPoint.java:344) - 
+2015-10-19 13:07:23,698  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 13:07:23,698  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 13:07:23,698  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 13:07:23,698  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 13:07:23,699  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 13:07:23,702  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 13:07:23,704  INFO (EntryPoint.java:374) - 
+2015-10-19 13:07:29,827  INFO (EntryPoint.java:375) - Relaciones del set de datos: 
+2015-10-19 13:07:29,828  INFO (EntryPoint.java:377) - a----es_un--->a1
+2015-10-19 13:07:29,828  INFO (EntryPoint.java:377) - a----menor_que--->b
+2015-10-19 13:07:29,829  INFO (EntryPoint.java:377) - b----menor_que--->c
+2015-10-19 13:07:29,829  INFO (EntryPoint.java:377) - b----mayor_que--->a
+2015-10-19 13:07:29,829  INFO (EntryPoint.java:377) - c----mayor_que--->a1
+2015-10-19 13:07:29,829  INFO (EntryPoint.java:377) - b----mayor_que--->a
+2015-10-19 13:07:29,830  INFO (EntryPoint.java:377) - c----es_un--->b1
+2015-10-19 13:07:29,830  INFO (EntryPoint.java:377) - b1----es_un--->b
+2015-10-19 13:07:29,830  INFO (EntryPoint.java:377) - a1----es_un--->a
+2015-10-19 13:07:29,831  INFO (EntryPoint.java:377) - a1----menor_que--->c
+2015-10-19 13:07:29,831  INFO (EntryPoint.java:377) - b1----mayor_que--->a
+2015-10-19 13:07:29,831  INFO (EntryPoint.java:377) - b----mayor_que--->a1
+2015-10-19 13:07:29,831  INFO (EntryPoint.java:377) - b----es_un--->b1
+2015-10-19 13:07:29,834  INFO (EntryPoint.java:192) - 
+2015-10-19 13:07:29,835  INFO (EntryPoint.java:193) - RED SEMANTICA CREADA: 
+2015-10-19 13:07:29,835  INFO (EntryPoint.java:195) - 
+2015-10-19 13:07:29,835  INFO (EntryPoint.java:196) - Red Semantica agrupada por PREMISA: 
+2015-10-19 13:07:29,836  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a'
+2015-10-19 13:07:29,836  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 13:07:29,837  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 13:07:29,837  INFO (RedSemantica.java:65) - 
+2015-10-19 13:07:29,837  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a1'
+2015-10-19 13:07:29,837  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 13:07:29,838  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 13:07:29,838  INFO (RedSemantica.java:65) - 
+2015-10-19 13:07:29,838  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b'
+2015-10-19 13:07:29,838  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 13:07:29,838  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:07:29,839  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:07:29,839  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 13:07:29,840  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 13:07:29,840  INFO (RedSemantica.java:65) - 
+2015-10-19 13:07:29,840  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b1'
+2015-10-19 13:07:29,841  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 13:07:29,841  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 13:07:29,841  INFO (RedSemantica.java:65) - 
+2015-10-19 13:07:29,841  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'c'
+2015-10-19 13:07:29,842  INFO (RedSemantica.java:63) - c----mayor_que--->a1
+2015-10-19 13:07:29,842  INFO (RedSemantica.java:63) - c----es_un--->b1
+2015-10-19 13:07:29,842  INFO (RedSemantica.java:65) - 
+2015-10-19 13:07:29,842  INFO (EntryPoint.java:199) - 
+2015-10-19 13:07:29,842  INFO (EntryPoint.java:200) - Red Semantica agrupada por TIPO DE RELACION: 
+2015-10-19 13:07:29,845  INFO (RedSemantica.java:75) - Relacion de tipo 'es_un'
+2015-10-19 13:07:29,849  INFO (RedSemantica.java:77) - a----es_un--->a1
+2015-10-19 13:07:29,849  INFO (RedSemantica.java:77) - c----es_un--->b1
+2015-10-19 13:07:29,850  INFO (RedSemantica.java:77) - b1----es_un--->b
+2015-10-19 13:07:29,850  INFO (RedSemantica.java:77) - a1----es_un--->a
+2015-10-19 13:07:29,850  INFO (RedSemantica.java:77) - b----es_un--->b1
+2015-10-19 13:07:29,850  INFO (RedSemantica.java:79) - 
+2015-10-19 13:07:29,850  INFO (RedSemantica.java:75) - Relacion de tipo 'mayor_que'
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:77) - c----mayor_que--->a1
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:77) - b1----mayor_que--->a
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:77) - b----mayor_que--->a1
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:79) - 
+2015-10-19 13:07:29,851  INFO (RedSemantica.java:75) - Relacion de tipo 'menor_que'
+2015-10-19 13:07:29,852  INFO (RedSemantica.java:77) - a----menor_que--->b
+2015-10-19 13:07:29,852  INFO (RedSemantica.java:77) - b----menor_que--->c
+2015-10-19 13:07:29,852  INFO (RedSemantica.java:77) - a1----menor_que--->c
+2015-10-19 13:07:29,852  INFO (RedSemantica.java:79) - 
+2015-10-19 13:08:11,163  INFO (EntryPoint.java:38) - Por favor, seleccione la modalidad para la ejecución: 
+2015-10-19 13:08:11,167  INFO (EntryPoint.java:39) - 1. Encadenamiento hacia adelante.
+2015-10-19 13:08:11,167  INFO (EntryPoint.java:40) - 2. Encadenamiento hacia atras.
+2015-10-19 13:08:11,167  INFO (EntryPoint.java:41) - 3. Red Semantica.
+2015-10-19 13:08:13,405  INFO (EntryPoint.java:175) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-10-19 13:08:15,449  INFO (EntryPoint.java:328) - 
+2015-10-19 13:08:15,449  INFO (EntryPoint.java:329) - Tipo de Relaciones del set de datos: 
+2015-10-19 13:08:15,450  INFO (EntryPoint.java:240) - 1) ----es_un--->
+2015-10-19 13:08:15,450  INFO (EntryPoint.java:240) - 2) ----mayor_que--->
+2015-10-19 13:08:15,452  INFO (EntryPoint.java:240) - 3) ----menor_que--->
+2015-10-19 13:08:15,454  INFO (EntryPoint.java:344) - 
+2015-10-19 13:08:15,455  INFO (EntryPoint.java:345) - Premisas del set de datos: 
+2015-10-19 13:08:15,455  INFO (EntryPoint.java:268) - 1) a
+2015-10-19 13:08:15,455  INFO (EntryPoint.java:268) - 2) b
+2015-10-19 13:08:15,456  INFO (EntryPoint.java:268) - 3) c
+2015-10-19 13:08:15,456  INFO (EntryPoint.java:268) - 4) a1
+2015-10-19 13:08:15,460  INFO (EntryPoint.java:268) - 5) b1
+2015-10-19 13:08:15,462  INFO (EntryPoint.java:374) - 
+2015-10-19 13:08:15,463  INFO (EntryPoint.java:375) - Relaciones del set de datos: 
+2015-10-19 13:08:15,463  INFO (EntryPoint.java:377) - a----es_un--->a1
+2015-10-19 13:08:15,463  INFO (EntryPoint.java:377) - a----menor_que--->b
+2015-10-19 13:08:15,463  INFO (EntryPoint.java:377) - b----menor_que--->c
+2015-10-19 13:08:15,464  INFO (EntryPoint.java:377) - b----mayor_que--->a
+2015-10-19 13:08:15,464  INFO (EntryPoint.java:377) - c----mayor_que--->a1
+2015-10-19 13:08:15,464  INFO (EntryPoint.java:377) - b----mayor_que--->a
+2015-10-19 13:08:15,464  INFO (EntryPoint.java:377) - c----mayor_que--->b1
+2015-10-19 13:08:15,465  INFO (EntryPoint.java:377) - b1----es_un--->b
+2015-10-19 13:08:15,465  INFO (EntryPoint.java:377) - a1----es_un--->a
+2015-10-19 13:08:15,468  INFO (EntryPoint.java:377) - a1----menor_que--->c
+2015-10-19 13:08:15,469  INFO (EntryPoint.java:377) - b1----mayor_que--->a
+2015-10-19 13:08:15,469  INFO (EntryPoint.java:377) - b----mayor_que--->a1
+2015-10-19 13:08:15,470  INFO (EntryPoint.java:377) - b----es_un--->b1
+2015-10-19 13:08:15,472  INFO (EntryPoint.java:192) - 
+2015-10-19 13:08:15,473  INFO (EntryPoint.java:193) - RED SEMANTICA CREADA: 
+2015-10-19 13:08:15,473  INFO (EntryPoint.java:195) - 
+2015-10-19 13:08:15,473  INFO (EntryPoint.java:196) - Red Semantica agrupada por PREMISA: 
+2015-10-19 13:08:15,473  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a'
+2015-10-19 13:08:15,473  INFO (RedSemantica.java:63) - a----es_un--->a1
+2015-10-19 13:08:15,473  INFO (RedSemantica.java:63) - a----menor_que--->b
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:65) - 
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'a1'
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:63) - a1----es_un--->a
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:63) - a1----menor_que--->c
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:65) - 
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b'
+2015-10-19 13:08:15,474  INFO (RedSemantica.java:63) - b----menor_que--->c
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:63) - b----mayor_que--->a
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:63) - b----mayor_que--->a1
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:63) - b----es_un--->b1
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:65) - 
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'b1'
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:63) - b1----es_un--->b
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:63) - b1----mayor_que--->a
+2015-10-19 13:08:15,475  INFO (RedSemantica.java:65) - 
+2015-10-19 13:08:15,476  INFO (RedSemantica.java:61) - Relaciones de la Premisa 'c'
+2015-10-19 13:08:15,476  INFO (RedSemantica.java:63) - c----mayor_que--->a1
+2015-10-19 13:08:15,476  INFO (RedSemantica.java:63) - c----mayor_que--->b1
+2015-10-19 13:08:15,476  INFO (RedSemantica.java:65) - 
+2015-10-19 13:08:15,476  INFO (EntryPoint.java:199) - 
+2015-10-19 13:08:15,476  INFO (EntryPoint.java:200) - Red Semantica agrupada por TIPO DE RELACION: 
+2015-10-19 13:08:15,478  INFO (RedSemantica.java:75) - Relacion de tipo 'es_un'
+2015-10-19 13:08:15,478  INFO (RedSemantica.java:77) - a----es_un--->a1
+2015-10-19 13:08:15,478  INFO (RedSemantica.java:77) - b1----es_un--->b
+2015-10-19 13:08:15,478  INFO (RedSemantica.java:77) - a1----es_un--->a
+2015-10-19 13:08:15,479  INFO (RedSemantica.java:77) - b----es_un--->b1
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:79) - 
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:75) - Relacion de tipo 'mayor_que'
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:77) - c----mayor_que--->a1
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:77) - b----mayor_que--->a
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:77) - c----mayor_que--->b1
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:77) - b1----mayor_que--->a
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:77) - b----mayor_que--->a1
+2015-10-19 13:08:15,480  INFO (RedSemantica.java:79) - 
+2015-10-19 13:08:15,481  INFO (RedSemantica.java:75) - Relacion de tipo 'menor_que'
+2015-10-19 13:08:15,481  INFO (RedSemantica.java:77) - a----menor_que--->b
+2015-10-19 13:08:15,481  INFO (RedSemantica.java:77) - b----menor_que--->c
+2015-10-19 13:08:15,481  INFO (RedSemantica.java:77) - a1----menor_que--->c
+2015-10-19 13:08:15,481  INFO (RedSemantica.java:79) - 

@@ -12,10 +12,12 @@ import org.springframework.stereotype.Component;
 //import ar.fiuba.fallasII.motorInferencia.dao.IGenericDao;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAdelante;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAtras;
-import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAtras2;
 import ar.fiuba.fallasII.motorInferencia.modelo.BaseDeConocimiento;
 import ar.fiuba.fallasII.motorInferencia.modelo.Premisa;
+import ar.fiuba.fallasII.motorInferencia.modelo.RedSemantica;
 import ar.fiuba.fallasII.motorInferencia.modelo.Regla;
+import ar.fiuba.fallasII.motorInferencia.modelo.Relacion;
+import ar.fiuba.fallasII.motorInferencia.modelo.TipoRelacion;
 
 @Component
 public class EntryPoint {
@@ -31,30 +33,29 @@ public class EntryPoint {
 
 	public void run() {
 		System.out.println("EntryPoint.run()");
-		// Regla rule = new Regla("Regla numero 1");
-		// rule.setDescription("Descripcion de la regla 1");
-		// dataAccess.save(rule);
-		// log.info("Rule saved: " + rule.toString());
-		// Regla ruleFound = dataAccess.get(Regla.class, rule.getId());
-		// log.info("Rule found: " + ruleFound.toString());
 		Scanner scanner = new Scanner(System.in);
-		// scanner.useDelimiter("\\n");
-
-		BaseDeConocimiento baseDeConocimiento = new BaseDeConocimiento();
-		baseDeConocimiento.addReglas(this.obtenerReglas());
-
-		log.info("Base de conocimiento:");
-		baseDeConocimiento.imprimir();
 
 		log.info("Por favor, seleccione la modalidad para la ejecución: ");
 		log.info("1. Encadenamiento hacia adelante.");
 		log.info("2. Encadenamiento hacia atras.");
+		log.info("3. Red Semantica.");
 		int opcion = scanner.nextInt();
-		if (opcion == 1) {
-			this.ejecutarEncadenamientoHaciaAdelante(baseDeConocimiento, scanner);
-		}
-		if (opcion == 2) {
-			this.ejecutarEncadenamientoHaciaAtras(baseDeConocimiento, scanner);
+		if (opcion < 3) {
+			
+			BaseDeConocimiento baseDeConocimiento = new BaseDeConocimiento();
+			baseDeConocimiento.addReglas(this.obtenerReglas());
+
+			log.info("Base de conocimiento:");
+			baseDeConocimiento.imprimir();
+			
+			if (opcion == 1) {
+				this.ejecutarEncadenamientoHaciaAdelante(baseDeConocimiento, scanner);
+			} else if (opcion == 2) {
+				this.ejecutarEncadenamientoHaciaAtras(baseDeConocimiento, scanner);
+			} 
+			
+		}else if (opcion == 3) {
+			this.armarRedSemantica(scanner);
 		}
 
 		scanner.close();
@@ -74,7 +75,8 @@ public class EntryPoint {
 
 		return premisas;
 	}
-
+	
+	
 	private Premisa obtenerHipotesisDelUsuario(Scanner scanner) {
 		log.info("Ingrese una hipotesis a verificar: ");
 		String opcion = scanner.next();
@@ -92,9 +94,7 @@ public class EntryPoint {
 		List<Premisa> hechosIniciales = this.obtenerPremisasDelUsuario(scanner);
 		Premisa hipotesisInicial = this.obtenerHipotesisDelUsuario(scanner);
 
-		//EncadenamientoHaciaAtras bc = new EncadenamientoHaciaAtras(baseDeConocimiento);
-		//List<Premisa> conocimientoAdquirido = bc2.evaluar(hechosIniciales, hipotesisInicial);
-		EncadenamientoHaciaAtras2 bc2 = new EncadenamientoHaciaAtras2(baseDeConocimiento, hechosIniciales);
+		EncadenamientoHaciaAtras bc2 = new EncadenamientoHaciaAtras(baseDeConocimiento, hechosIniciales);
 		List<Premisa> conocimientoAdquirido = bc2.evaluar(hipotesisInicial);
 		
 		log.info("Conocimiento adquirido: " + Arrays.toString(conocimientoAdquirido.toArray()));
@@ -164,4 +164,220 @@ public class EntryPoint {
 		return reglas;
 	}
 
+
+	//------------------------------------------------------------------------------------------------------
+	//REDES SEMANTICAS
+	//------------------------------------------------------------------------------------------------------
+	
+	private void armarRedSemantica(Scanner scanner) {
+		List<Relacion> relaciones = null;
+		
+		log.info("Desea usar set de datos de ejemplo precargados? (S/N)");
+		String opcion = scanner.next();
+		if (opcion.equalsIgnoreCase("S")) {
+			relaciones = obtenerRelaciones();
+			
+		} else {
+			List<TipoRelacion> tiporelacionesIniciales = this.obtenerTipoRelacionesDelUsuario(scanner);
+			List<Premisa> premisasIniciales = this.obtenerTipoPremisasDelUsuario(scanner);
+			relaciones = armarRelacionesDelUsuario(premisasIniciales, tiporelacionesIniciales, scanner);
+		}
+		
+		//Arma la red Semantica
+		RedSemantica redSemantica = new RedSemantica();
+		for (Relacion relacion : relaciones) {
+			redSemantica.addRelacion(relacion);
+		}
+		
+		log.info("");
+		log.info("RED SEMANTICA CREADA: ");
+		
+		log.info("");
+		log.info("Red Semantica agrupada por PREMISA: ");
+		redSemantica.imprimirPorPremisa();
+
+		log.info("");
+		log.info("Red Semantica agrupada por TIPO DE RELACION: ");
+		redSemantica.imprimirPorTipoRelacion();
+
+	}
+
+	private List<Premisa> obtenerTipoPremisasDelUsuario(Scanner scanner) {
+		List<Premisa> premisas = new ArrayList<Premisa>();
+		log.info("Ingrese el nombre de la nueva PREMISA o 0 para terminar: ");
+		String opcion = scanner.next();
+		while (!opcion.equals("0")) {
+			if (!opcion.equals("0")) {
+				premisas.add(new Premisa(opcion));
+			}
+			log.info("Ingrese el nombre de la nueva PREMISA o 0 para terminar: ");
+			opcion = scanner.next();
+		}
+
+		return premisas;
+	}
+	
+	private List<TipoRelacion> obtenerTipoRelacionesDelUsuario(Scanner scanner) {
+		List<TipoRelacion> relaciones = new ArrayList<TipoRelacion>();
+		log.info("Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: ");
+		String opcion = scanner.next();
+		while (!opcion.equals("0")) {
+			if (!opcion.equals("0")) {
+				relaciones.add(new TipoRelacion(opcion));
+			}
+			log.info("Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: ");
+			opcion = scanner.next();
+		}
+
+		return relaciones;
+	}
+	
+
+	private void mostrarTipoRelacionDelUsuario(List<TipoRelacion> lista) {
+		int i = 0;
+		for (TipoRelacion object : lista) {
+			i++;
+			log.info(i + ") " + object.toString());
+		}
+	}
+	
+	private TipoRelacion seleccioneTipoRelacionDelUsuario(List<TipoRelacion> lista, Scanner scanner) {
+		TipoRelacion tipoRelacion = null;
+		
+		while (tipoRelacion == null) {
+			log.info("Elija el tipo de nueva relacion de la red: ");
+			mostrarTipoRelacionDelUsuario(lista);
+			log.info("Ingrese el numero: ");
+			String opcion = scanner.next();
+			
+			try {
+				int index = Integer.parseInt(opcion);
+				tipoRelacion = lista.get(index - 1);
+			} catch (Exception e) {
+				log.info("Seleccion incorrecta!");
+			}
+		}
+		
+		return tipoRelacion;
+	}
+	
+	private void mostrarPremisaDelUsuario(List<Premisa> lista) {
+		int i = 0;
+		for (Premisa object : lista) {
+			i++;
+			log.info(i + ") " + object.toString());
+		}
+	}
+	
+	private Premisa seleccionePremisaDelUsuario(List<Premisa> lista, TipoRelacion tipoRelacion, Premisa primerPremisa, Scanner scanner) {
+		Premisa premisa = null;
+		
+		while (premisa == null) {
+			
+			if (primerPremisa == null)
+				log.info("Seleccione la primer premisa: XX " + tipoRelacion.toString() + " YY");
+			else
+				log.info("Seleccione la segunda premisa: " + primerPremisa.getValor() + " " + tipoRelacion.toString() + " YY");
+				
+			mostrarPremisaDelUsuario(lista);
+			log.info("Ingrese el numero: ");
+			String opcion = scanner.next();
+			
+			try {
+				int index = Integer.parseInt(opcion);
+				premisa = lista.get(index - 1);
+			} catch (Exception e) {
+				log.info("Seleccion incorrecta!");
+			}
+		}
+		
+		return premisa;
+	}
+	
+	private List<Relacion> armarRelacionesDelUsuario(List<Premisa> premisas, List<TipoRelacion> tipoRelaciones, Scanner scanner) {
+		List<Relacion> relaciones = new ArrayList<Relacion>();
+		
+		log.info("Agrega una nueva relacion? (S/N)");
+		String opcion = scanner.next();
+		while (!opcion.equalsIgnoreCase("N")) {
+			TipoRelacion tipoRelacion = seleccioneTipoRelacionDelUsuario(tipoRelaciones, scanner);
+			Premisa primerPremisa = seleccionePremisaDelUsuario(premisas, tipoRelacion, null, scanner);
+			Premisa segundaPremisa = seleccionePremisaDelUsuario(premisas, tipoRelacion, primerPremisa, scanner);
+			Relacion relacion = new Relacion(tipoRelacion, primerPremisa, segundaPremisa);
+			relaciones.add(relacion);
+			
+			log.info("Se ha agregado la nueva relacion: " + relacion.toString());
+			log.info("Agrega una nueva relacion? (S/N)");
+			opcion = scanner.next();
+		}
+
+		return relaciones;
+	}
+	
+	private List<Relacion> obtenerRelaciones() {
+		List<Relacion> relaciones = new ArrayList<Relacion>();
+
+		//Tipos de Relacion;
+		TipoRelacion trEsUn = new TipoRelacion("es_un");
+		TipoRelacion trMayor = new TipoRelacion("mayor_que");
+		TipoRelacion trMenor = new TipoRelacion("menor_que");
+		List<TipoRelacion> tipoRelaciones = new ArrayList<TipoRelacion>();
+		tipoRelaciones.add(trEsUn);
+		tipoRelaciones.add(trMayor);
+		tipoRelaciones.add(trMenor);
+		log.info("");
+		log.info("Tipo de Relaciones del set de datos: ");
+		mostrarTipoRelacionDelUsuario(tipoRelaciones);
+				
+		//Premisas
+		Premisa pA = new Premisa("a");
+		Premisa pB = new Premisa("b");
+		Premisa pC = new Premisa("c");
+		Premisa pA1 = new Premisa("a1");
+		Premisa pB1 = new Premisa("b1");
+		List<Premisa> premisas = new ArrayList<Premisa>();
+		premisas.add(pA);
+		premisas.add(pB);
+		premisas.add(pC);
+		premisas.add(pA1);
+		premisas.add(pB1);
+		log.info("");
+		log.info("Premisas del set de datos: ");
+		mostrarPremisaDelUsuario(premisas);
+		
+		Relacion r1 = new Relacion(trEsUn, pA, pA1);
+		relaciones.add(r1);
+		Relacion r2 = new Relacion(trMenor, pA, pB);
+		relaciones.add(r2);
+		Relacion r3 = new Relacion(trMenor, pB, pC);
+		relaciones.add(r3);
+		Relacion r4 = new Relacion(trMayor, pB, pA);
+		relaciones.add(r4);
+		Relacion r5 = new Relacion(trMayor, pC, pA1);
+		relaciones.add(r5);
+		Relacion r6 = new Relacion(trMayor, pB, pA);
+		relaciones.add(r6);
+		Relacion r7 = new Relacion(trMayor, pC, pB1);
+		relaciones.add(r7);
+		Relacion r8 = new Relacion(trEsUn, pB1, pB);
+		relaciones.add(r8);
+		Relacion r9 = new Relacion(trEsUn, pA1, pA);
+		relaciones.add(r9);
+		Relacion r10 = new Relacion(trMenor, pA1, pC);
+		relaciones.add(r10);
+		Relacion r11 = new Relacion(trMayor, pB1, pA);
+		relaciones.add(r11);
+		Relacion r12 = new Relacion(trMayor, pB, pA1);
+		relaciones.add(r12);
+		Relacion r13 = new Relacion(trEsUn, pB, pB1);
+		relaciones.add(r13);
+		log.info("");
+		log.info("Relaciones del set de datos: ");
+		for (Relacion relacion : relaciones) {
+			log.info(relacion.toString());
+		}
+		
+		return relaciones;
+	}
+	
 }
