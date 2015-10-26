@@ -2,6 +2,7 @@ package ar.fiuba.fallasII.motorInferencia;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,6 +14,8 @@ import org.springframework.stereotype.Component;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAdelante;
 import ar.fiuba.fallasII.motorInferencia.estrategias.EncadenamientoHaciaAtras;
 import ar.fiuba.fallasII.motorInferencia.modelo.BaseDeConocimiento;
+import ar.fiuba.fallasII.motorInferencia.modelo.ContenedorMarcos;
+import ar.fiuba.fallasII.motorInferencia.modelo.Marco;
 import ar.fiuba.fallasII.motorInferencia.modelo.Premisa;
 import ar.fiuba.fallasII.motorInferencia.modelo.RedSemantica;
 import ar.fiuba.fallasII.motorInferencia.modelo.Regla;
@@ -39,26 +42,28 @@ public class EntryPoint {
 		log.info("1. Encadenamiento hacia adelante.");
 		log.info("2. Encadenamiento hacia atras.");
 		log.info("3. Red Semantica.");
+		log.info("4. Marcos.");
 		int opcion = scanner.nextInt();
 		if (opcion < 3) {
-			
+
 			BaseDeConocimiento baseDeConocimiento = new BaseDeConocimiento();
 			baseDeConocimiento.addReglas(this.obtenerReglas());
 
 			log.info("Base de conocimiento:");
 			baseDeConocimiento.imprimir();
-			
+
 			if (opcion == 1) {
 				this.ejecutarEncadenamientoHaciaAdelante(baseDeConocimiento, scanner);
 			} else if (opcion == 2) {
 				this.ejecutarEncadenamientoHaciaAtras(baseDeConocimiento, scanner);
-			} 
-			
-		}else if (opcion == 3) {
+			}
+		} else if (opcion == 3) {
 			this.armarRedSemantica(scanner);
+		} else if (opcion == 4) {
+			this.armarMarcos(scanner);
 		}
-
 		scanner.close();
+
 	}
 
 	private List<Premisa> obtenerPremisasDelUsuario(Scanner scanner) {
@@ -75,8 +80,7 @@ public class EntryPoint {
 
 		return premisas;
 	}
-	
-	
+
 	private Premisa obtenerHipotesisDelUsuario(Scanner scanner) {
 		log.info("Ingrese una hipotesis a verificar: ");
 		String opcion = scanner.next();
@@ -96,7 +100,7 @@ public class EntryPoint {
 
 		EncadenamientoHaciaAtras bc2 = new EncadenamientoHaciaAtras(baseDeConocimiento, hechosIniciales);
 		List<Premisa> conocimientoAdquirido = bc2.evaluar(hipotesisInicial);
-		
+
 		log.info("Conocimiento adquirido: " + Arrays.toString(conocimientoAdquirido.toArray()));
 		if (conocimientoAdquirido.contains(hipotesisInicial)) {
 			log.info("La hipótesis " + hipotesisInicial + " fue deducida.");
@@ -143,7 +147,7 @@ public class EntryPoint {
 		r4.setHecho(new Premisa("v"));
 		r4.setPremisas(premisasR4);
 		reglas.add(r4);
-		
+
 		Regla r5 = new Regla();
 		List<Premisa> premisasR5 = new ArrayList<Premisa>();
 		premisasR5.add(new Premisa("s"));
@@ -152,7 +156,7 @@ public class EntryPoint {
 		r5.setHecho(new Premisa("x"));
 		r5.setPremisas(premisasR5);
 		reglas.add(r5);
-		
+
 		Regla r6 = new Regla();
 		List<Premisa> premisasR6 = new ArrayList<Premisa>();
 		premisasR6.add(new Premisa("a"));
@@ -164,34 +168,33 @@ public class EntryPoint {
 		return reglas;
 	}
 
+	// ------------------------------------------------------------------------------------------------------
+	// REDES SEMANTICAS
+	// ------------------------------------------------------------------------------------------------------
 
-	//------------------------------------------------------------------------------------------------------
-	//REDES SEMANTICAS
-	//------------------------------------------------------------------------------------------------------
-	
 	private void armarRedSemantica(Scanner scanner) {
 		List<Relacion> relaciones = null;
-		
+
 		log.info("Desea usar set de datos de ejemplo precargados? (S/N)");
 		String opcion = scanner.next();
 		if (opcion.equalsIgnoreCase("S")) {
 			relaciones = obtenerRelaciones();
-			
+
 		} else {
 			List<TipoRelacion> tiporelacionesIniciales = this.obtenerTipoRelacionesDelUsuario(scanner);
 			List<Premisa> premisasIniciales = this.obtenerTipoPremisasDelUsuario(scanner);
 			relaciones = armarRelacionesDelUsuario(premisasIniciales, tiporelacionesIniciales, scanner);
 		}
-		
-		//Arma la red Semantica
+
+		// Arma la red Semantica
 		RedSemantica redSemantica = new RedSemantica();
 		for (Relacion relacion : relaciones) {
 			redSemantica.addRelacion(relacion);
 		}
-		
+
 		log.info("");
 		log.info("RED SEMANTICA CREADA: ");
-		
+
 		log.info("");
 		log.info("Red Semantica agrupada por PREMISA: ");
 		redSemantica.imprimirPorPremisa();
@@ -216,7 +219,7 @@ public class EntryPoint {
 
 		return premisas;
 	}
-	
+
 	private List<TipoRelacion> obtenerTipoRelacionesDelUsuario(Scanner scanner) {
 		List<TipoRelacion> relaciones = new ArrayList<TipoRelacion>();
 		log.info("Ingrese el nombre del nuevo TIPO DE RELACION o 0 para terminar: ");
@@ -231,7 +234,6 @@ public class EntryPoint {
 
 		return relaciones;
 	}
-	
 
 	private void mostrarTipoRelacionDelUsuario(List<TipoRelacion> lista) {
 		int i = 0;
@@ -240,16 +242,16 @@ public class EntryPoint {
 			log.info(i + ") " + object.toString());
 		}
 	}
-	
+
 	private TipoRelacion seleccioneTipoRelacionDelUsuario(List<TipoRelacion> lista, Scanner scanner) {
 		TipoRelacion tipoRelacion = null;
-		
+
 		while (tipoRelacion == null) {
 			log.info("Elija el tipo de nueva relacion de la red: ");
 			mostrarTipoRelacionDelUsuario(lista);
 			log.info("Ingrese el numero: ");
 			String opcion = scanner.next();
-			
+
 			try {
 				int index = Integer.parseInt(opcion);
 				tipoRelacion = lista.get(index - 1);
@@ -257,10 +259,10 @@ public class EntryPoint {
 				log.info("Seleccion incorrecta!");
 			}
 		}
-		
+
 		return tipoRelacion;
 	}
-	
+
 	private void mostrarPremisaDelUsuario(List<Premisa> lista) {
 		int i = 0;
 		for (Premisa object : lista) {
@@ -268,21 +270,21 @@ public class EntryPoint {
 			log.info(i + ") " + object.toString());
 		}
 	}
-	
+
 	private Premisa seleccionePremisaDelUsuario(List<Premisa> lista, TipoRelacion tipoRelacion, Premisa primerPremisa, Scanner scanner) {
 		Premisa premisa = null;
-		
+
 		while (premisa == null) {
-			
+
 			if (primerPremisa == null)
 				log.info("Seleccione la primer premisa: XX " + tipoRelacion.toString() + " YY");
 			else
 				log.info("Seleccione la segunda premisa: " + primerPremisa.getValor() + " " + tipoRelacion.toString() + " YY");
-				
+
 			mostrarPremisaDelUsuario(lista);
 			log.info("Ingrese el numero: ");
 			String opcion = scanner.next();
-			
+
 			try {
 				int index = Integer.parseInt(opcion);
 				premisa = lista.get(index - 1);
@@ -290,13 +292,13 @@ public class EntryPoint {
 				log.info("Seleccion incorrecta!");
 			}
 		}
-		
+
 		return premisa;
 	}
-	
+
 	private List<Relacion> armarRelacionesDelUsuario(List<Premisa> premisas, List<TipoRelacion> tipoRelaciones, Scanner scanner) {
 		List<Relacion> relaciones = new ArrayList<Relacion>();
-		
+
 		log.info("Agrega una nueva relacion? (S/N)");
 		String opcion = scanner.next();
 		while (!opcion.equalsIgnoreCase("N")) {
@@ -305,7 +307,7 @@ public class EntryPoint {
 			Premisa segundaPremisa = seleccionePremisaDelUsuario(premisas, tipoRelacion, primerPremisa, scanner);
 			Relacion relacion = new Relacion(tipoRelacion, primerPremisa, segundaPremisa);
 			relaciones.add(relacion);
-			
+
 			log.info("Se ha agregado la nueva relacion: " + relacion.toString());
 			log.info("Agrega una nueva relacion? (S/N)");
 			opcion = scanner.next();
@@ -313,11 +315,11 @@ public class EntryPoint {
 
 		return relaciones;
 	}
-	
+
 	private List<Relacion> obtenerRelaciones() {
 		List<Relacion> relaciones = new ArrayList<Relacion>();
 
-		//Tipos de Relacion;
+		// Tipos de Relacion;
 		TipoRelacion trEsUn = new TipoRelacion("es_un");
 		TipoRelacion trMayor = new TipoRelacion("mayor_que");
 		TipoRelacion trMenor = new TipoRelacion("menor_que");
@@ -328,8 +330,8 @@ public class EntryPoint {
 		log.info("");
 		log.info("Tipo de Relaciones del set de datos: ");
 		mostrarTipoRelacionDelUsuario(tipoRelaciones);
-				
-		//Premisas
+
+		// Premisas
 		Premisa pA = new Premisa("a");
 		Premisa pB = new Premisa("b");
 		Premisa pC = new Premisa("c");
@@ -344,7 +346,7 @@ public class EntryPoint {
 		log.info("");
 		log.info("Premisas del set de datos: ");
 		mostrarPremisaDelUsuario(premisas);
-		
+
 		Relacion r1 = new Relacion(trEsUn, pA, pA1);
 		relaciones.add(r1);
 		Relacion r2 = new Relacion(trMenor, pA, pB);
@@ -376,8 +378,81 @@ public class EntryPoint {
 		for (Relacion relacion : relaciones) {
 			log.info(relacion.toString());
 		}
-		
+
 		return relaciones;
 	}
-	
+
+	/**
+	 * ***************************************************
+	 * ******************** MARCOS ***********************
+	 * ***************************************************
+	 */
+
+	private void armarMarcos(Scanner scanner) {
+		log.info("Desea usar set de datos de ejemplo precargados? (S/N)");
+		String opcion = scanner.next();
+		ContenedorMarcos contenedorMarcos = new ContenedorMarcos();
+		if (opcion.equalsIgnoreCase("S")) {
+			contenedorMarcos.cargarDatosDePrueba();
+		} else {
+			// Se piden marcos al usuario.
+			String nombreMarco = "";
+			while (!nombreMarco.contains("done")) {
+				log.info("Ingrese el nombre del marco y presione ENTER. Para finalizar, ingrese 'done' y presione ENTER.");
+				nombreMarco = scanner.nextLine();
+				if (!nombreMarco.contains("done") && !nombreMarco.isEmpty()) {
+					// Ahora se pide al usuario que ingrese las caracteristicas que dispone.
+					HashSet<String> caracteristicasMarco = new HashSet<String>();
+					log.info("Ingrese las caracteristicas escribiendolas en consola y presionando ENTER. Para finalizar, ingrese 'done' y presione ENTER.");
+					String caracteristicaMarco = "";
+					while (!caracteristicaMarco.contains("done")) {
+						caracteristicaMarco = scanner.nextLine();
+						if (!caracteristicaMarco.contains("done") && !caracteristicaMarco.isEmpty()) {
+							caracteristicasMarco.add(caracteristicaMarco);
+							log.info("Se ha agregado la caracteristica: " + caracteristicaMarco);
+						}
+					}
+					contenedorMarcos.addMarco(new Marco(nombreMarco, caracteristicasMarco));
+					log.info("Se agregó un nuevo Marco a la base de conocimientos (" + nombreMarco + ")");
+				}
+			}
+		}
+
+		log.info("Se muestra la base de conocimientos: ");
+		contenedorMarcos.imprimirContenido();
+
+		// Ahora se pide al usuario que ingrese las caracteristicas que dispone.
+		HashSet<String> caracteristicasUsuario = new HashSet<String>();
+		log.info("Ingrese las caracteristicas escribiendolas en consola y presionando ENTER. Para finalizar, ingrese 'done' y presione ENTER.");
+		String caracteristica = "";
+		while (!caracteristica.contains("done")) {
+			caracteristica = scanner.nextLine();
+			if (!caracteristica.contains("done") && !caracteristica.isEmpty()) {
+				caracteristicasUsuario.add(caracteristica);
+				log.info("Se ha agregado la caracteristica: " + caracteristica);
+			}
+		}
+		scanner.close();
+		log.info("Carga de características finalizada. Las características ingresadas son: ");
+		for (String eachCaracteristicaIngresada : caracteristicasUsuario) {
+			log.info(eachCaracteristicaIngresada);
+		}
+
+		log.info("A continuación se realizará la búsqueda de Marcos:");
+		boolean found = false;
+		// Se busca un marco que se corresponda con las caracteristicas ingresadas por el usuario.
+		for (Marco eachMarco : contenedorMarcos.getMarcoList()) {
+			if (eachMarco.matches(caracteristicasUsuario)) {
+				found = true;
+				log.info("Coincidencia de Marco:");
+				eachMarco.imprimir();
+				break;
+			}
+		}
+		if (!found) {
+			log.info("No existe ningún Marco que coincida con las características ingresadas.");
+		}
+
+	}
+
 }
