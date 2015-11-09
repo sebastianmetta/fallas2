@@ -1,62 +1,147 @@
-2015-10-26 16:34:41,596  INFO (EntryPoint.java:41) - Por favor, seleccione la modalidad para la ejecución: 
-2015-10-26 16:34:41,605  INFO (EntryPoint.java:42) - 1. Encadenamiento hacia adelante.
-2015-10-26 16:34:41,605  INFO (EntryPoint.java:43) - 2. Encadenamiento hacia atras.
-2015-10-26 16:34:41,605  INFO (EntryPoint.java:44) - 3. Red Semantica.
-2015-10-26 16:34:41,606  INFO (EntryPoint.java:45) - 4. Marcos.
-2015-10-26 16:34:47,705  INFO (EntryPoint.java:392) - Desea usar set de datos de ejemplo precargados? (S/N)
-2015-10-26 16:34:51,460  INFO (EntryPoint.java:421) - Se muestra la base de conocimientos: 
-2015-10-26 16:34:51,460  INFO (Marco.java:51) - Nombre Marco: Marco1
-2015-10-26 16:34:51,461  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,461  INFO (Marco.java:54) - c3
-2015-10-26 16:34:51,462  INFO (Marco.java:54) - c4
-2015-10-26 16:34:51,462  INFO (Marco.java:54) - c1
-2015-10-26 16:34:51,462  INFO (Marco.java:54) - c2
-2015-10-26 16:34:51,463  INFO (Marco.java:51) - Nombre Marco: Marco2
-2015-10-26 16:34:51,463  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,463  INFO (Marco.java:54) - c5
-2015-10-26 16:34:51,467  INFO (Marco.java:54) - c6
-2015-10-26 16:34:51,468  INFO (Marco.java:54) - c7
-2015-10-26 16:34:51,468  INFO (Marco.java:51) - Nombre Marco: Marco3
-2015-10-26 16:34:51,468  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,469  INFO (Marco.java:54) - c11
-2015-10-26 16:34:51,469  INFO (Marco.java:54) - c10
-2015-10-26 16:34:51,469  INFO (Marco.java:54) - c13
-2015-10-26 16:34:51,469  INFO (Marco.java:54) - c8
-2015-10-26 16:34:51,470  INFO (Marco.java:54) - c12
-2015-10-26 16:34:51,470  INFO (Marco.java:54) - c9
-2015-10-26 16:34:51,470  INFO (Marco.java:54) - c14
-2015-10-26 16:34:51,470  INFO (Marco.java:51) - Nombre Marco: Marco4
-2015-10-26 16:34:51,471  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,471  INFO (Marco.java:54) - c15
-2015-10-26 16:34:51,471  INFO (Marco.java:51) - Nombre Marco: Marco5
-2015-10-26 16:34:51,471  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,472  INFO (Marco.java:54) - c17
-2015-10-26 16:34:51,472  INFO (Marco.java:54) - c16
-2015-10-26 16:34:51,472  INFO (Marco.java:54) - c19
-2015-10-26 16:34:51,478  INFO (Marco.java:54) - c18
-2015-10-26 16:34:51,478  INFO (Marco.java:51) - Nombre Marco: Marco6
-2015-10-26 16:34:51,478  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,479  INFO (Marco.java:54) - c20
-2015-10-26 16:34:51,479  INFO (Marco.java:54) - c21
-2015-10-26 16:34:51,479  INFO (Marco.java:51) - Nombre Marco: Marco7
-2015-10-26 16:34:51,479  INFO (Marco.java:52) - Características: 
-2015-10-26 16:34:51,480  INFO (Marco.java:54) - c22
-2015-10-26 16:34:51,480  INFO (Marco.java:54) - c24
-2015-10-26 16:34:51,480  INFO (Marco.java:54) - c23
-2015-10-26 16:34:51,480  INFO (Marco.java:54) - c26
-2015-10-26 16:34:51,481  INFO (Marco.java:54) - c25
-2015-10-26 16:34:51,481  INFO (EntryPoint.java:426) - Ingrese las caracteristicas escribiendolas en consola y presionando ENTER. Para finalizar, ingrese 'done' y presione ENTER.
-2015-10-26 16:35:23,030  INFO (EntryPoint.java:432) - Se ha agregado la caracteristica: c5
-2015-10-26 16:35:26,204  INFO (EntryPoint.java:432) - Se ha agregado la caracteristica: c6
-2015-10-26 16:35:28,584  INFO (EntryPoint.java:432) - Se ha agregado la caracteristica: c7
-2015-10-26 16:35:30,859  INFO (EntryPoint.java:436) - Carga de características finalizada. Las características ingresadas son: 
-2015-10-26 16:35:30,860  INFO (EntryPoint.java:438) - c5
-2015-10-26 16:35:30,860  INFO (EntryPoint.java:438) - c6
-2015-10-26 16:35:30,861  INFO (EntryPoint.java:438) - c7
-2015-10-26 16:35:30,861  INFO (EntryPoint.java:441) - A continuación se realizará la búsqueda de Marcos:
-2015-10-26 16:35:30,861  INFO (EntryPoint.java:447) - Coincidencia de Marco:
-2015-10-26 16:35:30,861  INFO (Marco.java:51) - Nombre Marco: Marco2
-2015-10-26 16:35:30,862  INFO (Marco.java:52) - Características: 
-2015-10-26 16:35:30,862  INFO (Marco.java:54) - c5
-2015-10-26 16:35:30,862  INFO (Marco.java:54) - c6
-2015-10-26 16:35:30,862  INFO (Marco.java:54) - c7
+2015-11-09 15:10:05,068  INFO (EntryPoint.java:41) - Por favor, seleccione la modalidad para la ejecución: 
+2015-11-09 15:10:05,083  INFO (EntryPoint.java:42) - 1. Encadenamiento hacia adelante.
+2015-11-09 15:10:05,083  INFO (EntryPoint.java:43) - 2. Encadenamiento hacia atras.
+2015-11-09 15:10:05,084  INFO (EntryPoint.java:44) - 3. Red Semantica.
+2015-11-09 15:10:05,084  INFO (EntryPoint.java:45) - 4. Marcos.
+2015-11-09 18:05:41,762  INFO (EntryPoint.java:42) - Por favor, seleccione la modalidad para la ejecución: 
+2015-11-09 18:05:41,762  INFO (EntryPoint.java:43) - 1. Encadenamiento hacia adelante.
+2015-11-09 18:05:41,762  INFO (EntryPoint.java:44) - 2. Encadenamiento hacia atras.
+2015-11-09 18:05:41,762  INFO (EntryPoint.java:45) - 3. Red Semantica.
+2015-11-09 18:05:41,762  INFO (EntryPoint.java:46) - 4. Red Semantica (BD).
+2015-11-09 18:05:41,777  INFO (EntryPoint.java:47) - 5. Marcos.
+2015-11-09 18:05:46,824  INFO (EntryPoint.java:182) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-11-09 18:05:51,455  INFO (EntryPoint.java:357) - 
+2015-11-09 18:05:51,455  INFO (EntryPoint.java:358) - Tipo de Relaciones del set de datos: 
+2015-11-09 18:05:51,455  INFO (EntryPoint.java:266) - 1) ----es_un--->
+2015-11-09 18:05:51,455  INFO (EntryPoint.java:266) - 2) ----mayor_que--->
+2015-11-09 18:05:51,455  INFO (EntryPoint.java:266) - 3) ----menor_que--->
+2015-11-09 18:05:51,455  INFO (EntryPoint.java:373) - 
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:374) - Premisas del set de datos: 
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:294) - 1) a
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:294) - 2) b
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:294) - 3) c
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:294) - 4) a1
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:294) - 5) b1
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:403) - 
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:404) - Relaciones del set de datos: 
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - a----es_un--->a1
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - a----menor_que--->b
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b----menor_que--->c
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b----mayor_que--->a
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - c----mayor_que--->a1
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b----mayor_que--->a
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - c----mayor_que--->b1
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b1----es_un--->b
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - a1----es_un--->a
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - a1----menor_que--->c
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b1----mayor_que--->a
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b----mayor_que--->a1
+2015-11-09 18:05:51,471  INFO (EntryPoint.java:406) - b----es_un--->b1
+2015-11-09 18:09:47,763  INFO (EntryPoint.java:216) - 
+2015-11-09 18:09:48,714  INFO (EntryPoint.java:217) - RED SEMANTICA CREADA: 
+2015-11-09 18:09:52,276  INFO (EntryPoint.java:219) - 
+2015-11-09 18:09:52,853  INFO (EntryPoint.java:220) - Red Semantica agrupada por PREMISA: 
+2015-11-09 18:09:54,322  INFO (EntryPoint.java:223) - 
+2015-11-09 18:09:54,634  INFO (EntryPoint.java:224) - Red Semantica agrupada por TIPO DE RELACION: 
+2015-11-09 18:29:41,593  INFO (EntryPoint.java:42) - Por favor, seleccione la modalidad para la ejecución: 
+2015-11-09 18:29:41,593  INFO (EntryPoint.java:43) - 1. Encadenamiento hacia adelante.
+2015-11-09 18:29:41,593  INFO (EntryPoint.java:44) - 2. Encadenamiento hacia atras.
+2015-11-09 18:29:41,593  INFO (EntryPoint.java:45) - 3. Red Semantica.
+2015-11-09 18:29:41,593  INFO (EntryPoint.java:46) - 4. Red Semantica (BD).
+2015-11-09 18:29:41,608  INFO (EntryPoint.java:47) - 5. Marcos.
+2015-11-09 18:29:46,189  INFO (EntryPoint.java:182) - Desea usar set de datos de ejemplo precargados? (S/N)
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:357) - 
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:358) - Tipo de Relaciones del set de datos: 
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:266) - 1) ----es_un--->
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:266) - 2) ----mayor_que--->
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:266) - 3) ----menor_que--->
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:373) - 
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:374) - Premisas del set de datos: 
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:294) - 1) a
+2015-11-09 18:29:49,361  INFO (EntryPoint.java:294) - 2) b
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:294) - 3) c
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:294) - 4) a1
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:294) - 5) b1
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:403) - 
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:404) - Relaciones del set de datos: 
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - a----es_un--->a1
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - a----menor_que--->b
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b----menor_que--->c
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b----mayor_que--->a
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - c----mayor_que--->a1
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b----mayor_que--->a
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - c----mayor_que--->b1
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b1----es_un--->b
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - a1----es_un--->a
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - a1----menor_que--->c
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b1----mayor_que--->a
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b----mayor_que--->a1
+2015-11-09 18:29:49,377  INFO (EntryPoint.java:406) - b----es_un--->b1
+2015-11-09 18:29:54,343  INFO (EntryPoint.java:216) - 
+2015-11-09 18:29:54,343  INFO (EntryPoint.java:217) - RED SEMANTICA CREADA: 
+2015-11-09 18:29:54,343  INFO (EntryPoint.java:219) - 
+2015-11-09 18:29:54,343  INFO (EntryPoint.java:220) - Red Semantica agrupada por PREMISA: 
+2015-11-09 18:30:34,744  INFO (RedSemanticaDB.java:79) - Relaciones de la Premisa 'a'
+2015-11-09 18:31:01,763  INFO (RedSemanticaDB.java:86) - a----es_un--->a1
+2015-11-09 18:31:18,290  INFO (RedSemanticaDB.java:86) - a----es_un--->a1
+2015-11-09 18:31:28,603  INFO (RedSemanticaDB.java:86) - a----menor_que--->b
+2015-11-09 18:32:39,676  INFO (RedSemanticaDB.java:86) - a----menor_que--->b
+2015-11-09 18:33:12,222  INFO (RedSemanticaDB.java:88) - 
+2015-11-09 18:33:14,299  INFO (RedSemanticaDB.java:79) - Relaciones de la Premisa 'a1'
+2015-11-09 18:33:18,270  INFO (RedSemanticaDB.java:86) - a1----es_un--->a
+2015-11-09 18:33:26,736  INFO (RedSemanticaDB.java:86) - a1----es_un--->a
+2015-11-09 18:33:28,859  INFO (RedSemanticaDB.java:86) - a1----menor_que--->c
+2015-11-09 18:33:30,331  INFO (RedSemanticaDB.java:86) - a1----menor_que--->c
+2015-11-09 18:34:47,838  INFO (RedSemanticaDB.java:88) - 
+2015-11-09 18:34:48,494  INFO (RedSemanticaDB.java:79) - Relaciones de la Premisa 'b'
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----menor_que--->c
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----menor_que--->c
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----mayor_que--->a
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----mayor_que--->a
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----mayor_que--->a1
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----mayor_que--->a
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----mayor_que--->a
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----mayor_que--->a1
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----es_un--->b1
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:86) - b----es_un--->b1
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:88) - 
+2015-11-09 18:34:50,418  INFO (RedSemanticaDB.java:79) - Relaciones de la Premisa 'c'
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - c----mayor_que--->a1
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - c----mayor_que--->b1
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - c----mayor_que--->a1
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - c----mayor_que--->b1
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:88) - 
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:79) - Relaciones de la Premisa 'b1'
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - b1----es_un--->b
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - b1----es_un--->b
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - b1----mayor_que--->a
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:86) - b1----mayor_que--->a
+2015-11-09 18:34:50,434  INFO (RedSemanticaDB.java:88) - 
+2015-11-09 18:34:50,434  INFO (EntryPoint.java:223) - 
+2015-11-09 18:34:50,434  INFO (EntryPoint.java:224) - Red Semantica agrupada por TIPO DE RELACION: 
+2015-11-09 18:35:19,071  INFO (RedSemanticaDB.java:101) - a----es_un--->a1
+2015-11-09 18:35:25,260  INFO (RedSemanticaDB.java:101) - b1----es_un--->b
+2015-11-09 18:35:28,087  INFO (RedSemanticaDB.java:101) - a1----es_un--->a
+2015-11-09 18:35:30,898  INFO (RedSemanticaDB.java:101) - b----es_un--->b1
+2015-11-09 18:35:32,930  INFO (RedSemanticaDB.java:101) - a----es_un--->a1
+2015-11-09 18:35:34,976  INFO (RedSemanticaDB.java:101) - b1----es_un--->b
+2015-11-09 18:35:37,010  INFO (RedSemanticaDB.java:101) - a1----es_un--->a
+2015-11-09 18:35:38,993  INFO (RedSemanticaDB.java:101) - b----es_un--->b1
+2015-11-09 18:35:40,975  INFO (RedSemanticaDB.java:101) - a----menor_que--->b
+2015-11-09 18:35:43,459  INFO (RedSemanticaDB.java:101) - b----menor_que--->c
+2015-11-09 18:35:44,891  INFO (RedSemanticaDB.java:101) - a1----menor_que--->c
+2015-11-09 18:35:46,371  INFO (RedSemanticaDB.java:101) - a----menor_que--->b
+2015-11-09 18:35:47,854  INFO (RedSemanticaDB.java:101) - b----menor_que--->c
+2015-11-09 18:35:49,414  INFO (RedSemanticaDB.java:101) - a1----menor_que--->c
+2015-11-09 18:35:50,850  INFO (RedSemanticaDB.java:101) - b----mayor_que--->a
+2015-11-09 18:35:52,506  INFO (RedSemanticaDB.java:101) - c----mayor_que--->a1
+2015-11-09 18:36:07,429  INFO (RedSemanticaDB.java:101) - b----mayor_que--->a
+2015-11-09 18:36:10,708  INFO (RedSemanticaDB.java:101) - c----mayor_que--->b1
+2015-11-09 18:36:12,221  INFO (RedSemanticaDB.java:101) - b1----mayor_que--->a
+2015-11-09 18:36:13,757  INFO (RedSemanticaDB.java:101) - b----mayor_que--->a1
+2015-11-09 18:36:15,289  INFO (RedSemanticaDB.java:101) - b----mayor_que--->a
+2015-11-09 18:36:16,802  INFO (RedSemanticaDB.java:101) - c----mayor_que--->a1
+2015-11-09 18:36:18,528  INFO (RedSemanticaDB.java:101) - b----mayor_que--->a
+2015-11-09 18:36:19,966  INFO (RedSemanticaDB.java:101) - c----mayor_que--->b1
+2015-11-09 18:36:21,411  INFO (RedSemanticaDB.java:101) - b1----mayor_que--->a
+2015-11-09 18:36:26,397  INFO (RedSemanticaDB.java:101) - b----mayor_que--->a1
